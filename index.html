@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Front pageeee</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container"></div>
-    <img src="curve.svg" class="test"> 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="box">
+    <!-- <img src="curve.svg" class="test"> -->
     <header>
-    <nav>
-      <ul class="menu">
-        <li>home/</li>
-        <li>portfolio/</li>
-        <li>me/</li>
-      </ul>
-    </nav>
-</header>
+      <nav>
+        <div class="nav__buttons--left">
+          <img src="svg/arrow--left.svg" class="nav__arrows">
+          <img src="svg/arrow--right.svg" class="nav__arrows">
+          <img src="svg/home.svg" class="nav__arrows">
+        </div>
+        <ul class="menu">
+          <li class="nav--active">~/home/</li>
+          <li>projects/</li>
+          <li>experience/</li>
+         <!-- <li>portfolio/</li>
+          <li>me/</li> -->
+        </ul>
+        <div class="nav__buttons--right">
+          <img src="svg/github-icon.svg" class="nav__arrows">
+          <img src="svg/email-icon.svg" class="nav__arrows">
+      </div>
+      </nav>
+    </header>
     <main>
-        <div class="grid">
-            <img src="profile.JPG" class="profile">
-            <img src="star.svg" class="star">
-            <div>
-             <!--   <p>christine<br>ky<br>nguyen</p> -->
-            </div>
-<h1 class="grid-item">web developer</h1>
-<p class="grid-item2">-> under construction</p>
-<!-- <p>[ STATUS ]: ENROLLED NTNU GJØVIK</p> -->
- <div class="slide">O O O</div>
+      <div class="grid">
+        <svg width="5" height="200" xmlns="http://www.w3.org/2000/svg" class="line">
+          <line x1="1" y1="0" x2="1" y2="200" stroke="white" stroke-width="2"/>
+        </svg>
+        <svg width="5" height="100" xmlns="http://www.w3.org/2000/svg" class="line2">
+          <line x1="1" y1="0" x2="1" y2="200" stroke="white" stroke-width="2"/>
+        </svg>
+       <!-- <img src="profile.JPG" class="profile"> -->
+        <img src="star.svg" class="star">
+        <h1 class="info">hello<span style="font-size: 5rem;">.</span><br><span style="font-size: 4rem;">am <span class="intro__name">Christine</span> :)</span></p>
+          <!-- <p class="info-box">enthusiastic about learning and creativity.<br>and currently studying</p>
+          <h2 class="grid-item">web development</h2> -->
+          <!-- <p class="grid-item2">✦✦✧ in progress</p> --> 
+      </div>
+
+      <!-- <span class="rotated-text">copyright christine ky nguyen tihi</span>
+       navigate using the arrows <- -> if you're interested -->
     </main>
-</div>
-  </body>
+  </div>
+</body>
+
 </html>

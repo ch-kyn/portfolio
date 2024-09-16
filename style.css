@@ -7,14 +7,34 @@
   src: url("Art-nuvo/Art-nuvo.otf"), format("otf");
 }
 * {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Arial";
+  font-size: 16px;
 }
 
 body {
-  margin: 0;
-  background-image: url("noise.svg"), linear-gradient(#f0efcc, rgb(95, 144, 137));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  background-image: url("noise.svg"), linear-gradient(#85822c, #b1ded7);
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: top left, center;
+}
+
+.box {
+  width: 98vw;
+  height: 90%;
+  background-color: black;
+  color: white;
+  border: 2.5px solid white;
+  pointer-events: none;
+  border-radius: 10px;
+  background-image: url("noise.svg"), linear-gradient(#85822c, #b1ded7);
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: fixed, fixed;
@@ -22,81 +42,88 @@ body {
 }
 
 .menu {
+  border: solid rgba(255, 255, 255, 0.2) 2px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Adjust the number of columns as needed */
+  justify-content: center; /* Centers the grid within the container */
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px/50px;
+}
+
+nav {
+  padding: 0.5% 0;
+  width: 95vw;
+  border-radius: 10px;
   display: flex;
-  padding: 3% 0 1%;
-  justify-content: center;
-  border: solid white 3.5px;
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center;
+}
+
+/* nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: black;
+} */
+main {
+  height: 90%;
+}
+main::before {
+  content: "";
+  display: block;
+  width: 97.8vw;
+  padding: 0;
+  border-top: white solid 2.5px;
 }
 
 li {
-  display: block;
+  display: inline-block;
   padding: 0 2%;
   font-size: 2rem;
-  font-family: "Arial";
   color: white;
   font-weight: bold;
 }
 
 .container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 2%;
-  border: 3.5px solid white;
-  pointer-events: none;
-  border-radius: 10px;
-}
-
-main {
-  padding: 0 5%;
-  height: 100%;
-}
-
-.flower {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  z-index: 2;
+  position: relative;
 }
 
 .grid {
-  padding-top: 1vw;
   display: grid;
-  grid-template-columns: repeat(4, 0.4fr);
-  grid-template-rows: repeat(6, 0.2fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   width: 100%;
+  height: 100%; /* Ensure the grid takes up the full height of the .box */
 }
 
 .grid-item {
-  grid-column: 1/6;
-  grid-row: 5/7;
+  grid-column: 2/6;
+  grid-row: 19/19;
   align-self: center;
   font-size: 5rem;
-  font-family: "Wiskind";
   color: white;
 }
 
 .grid-item2 {
-  grid-column: 1/3;
-  grid-row: 6/6;
+  grid-column: 2/3;
+  grid-row: 19/24;
   align-self: center;
   font-size: 2rem;
   font-family: "Wiskind";
   color: white;
   margin-top: 2%;
+}
+
+.info {
+  grid-column: 2/6;
+  grid-row: 3/4;
+  align-self: center;
+  font-size: 3rem;
+  color: white;
 }
 
 .profile {
@@ -109,14 +136,10 @@ main {
 }
 
 .star {
-  width: 20%;
-}
-
-.test {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
+  position: relative;
+  width: 40%;
+  grid-column: 10/12;
+  grid-row: 5/6;
 }
 
 .slide {
@@ -127,4 +150,53 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.rotated-text {
+  position: absolute;
+  left: 20px; /* Adjust as needed for alignment */
+  top: 20px; /* Adjust as needed for alignment */
+  transform: rotate(-45deg); /* Rotate text diagonally */
+  transform-origin: left top; /* Set rotation point to the top-left corner */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.flower {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box {
+  font-size: 1rem;
+}
+
+.nav__arrows {
+  width: 2.5vw;
+  margin-left: 2rem;
+}
+
+.nav__buttons--left, .nav__buttons--right {
+  width: 20%;
+}
+
+.line {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2/4;
+  margin-left: 10%;
+}
+
+.line2 {
+  display: grid;
+  grid-column: 1;
+  grid-row: 4;
+  margin-left: 10%;
+  margin-top: 0%;
+}
+
+.intro__name {
+  font-size: 4rem;
+  color: rgb(255, 253, 248);
 }/*# sourceMappingURL=style.css.map */
