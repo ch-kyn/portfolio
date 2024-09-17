@@ -1,56 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div class="box">
-    <!-- <img src="curve.svg" class="test"> -->
-    <header>
-      <nav>
-        <div class="nav__buttons--left">
-          <img src="svg/arrow--left.svg" class="nav__arrows">
-          <img src="svg/arrow--right.svg" class="nav__arrows">
-          <img src="svg/home.svg" class="nav__arrows">
+  <body>
+    <div class="box">
+      <!-- <img src="curve.svg" class="test"> -->
+      <header>
+        <nav>
+          <div class="nav__buttons--left">
+            <img src="svg/arrow--left.svg" class="nav__arrows" />
+            <img src="svg/arrow--right.svg" class="nav__arrows" />
+            <a href="index.html"><img src="svg/home.svg" alt="home icon" class="nav__arrows"/></a>
+          </div>
+          <ul class="menu">
+            <li class="nav--active"><a href="#">~/home/</a></li>
+            <button class="dropdown__button"><img src="svg/arrow--down.svg" alt="" class="arrow--down"></button>
+            <div class="dropdown__content">
+              <li class=""><a href="#">/projects</a></li>
+              <li class=""><a href="#">/experience</a></li>
+            </div>
+          </ul>
+          <div class="nav__buttons--right">
+            <a href="https://github.com/ch-kyn">
+              <img src="svg/github-icon.svg" alt="GitHub icon" class="nav__arrows"/>
+            </a>
+            <img
+              src="svg/email-icon.svg"
+              alt="email icon"
+              class="nav__arrows"
+            />
+            <svg
+              width="5"
+              height="30"
+              xmlns="http://www.w3.org/2000/svg"
+              class="nav__arrows"
+            >
+              <line
+                x1="1"
+                y1="0"
+                x2="1"
+                y2="30"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="grid">
+          <img src="profile.JPG" class="profile">
+          <div class="note">
+            <p>
+              currently studying web development at NTNU Gjøvik, and would
+              describe myself as very enthusiastic towards learning, being
+              creative and expanding my skillset in both front- and back-end development :)
+            </p>
+          </div>
+       <div class="line">+</div>
+          <div class="info--2">
+            <h1 class="info">hello<span style="font-size: 5rem">.</span></h1>
+            <h1 class="name">i'm <span class="intro__name">Christine*</span></h1>
+          </div>
+          <div class="grid-item"><span class="front__nav--span">if interested, check out my</span>
+            <div class="navi">
+            <h2 class="front__nav">projects</h2>
+            <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"/>
+               </svg>
+          </div>
+          <div class="navi2">
+            <h2 class="front__nav">experience</h2>
+            <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"/>
+            </svg>
+          </div>
+          </div>
         </div>
-        <ul class="menu">
-          <li class="nav--active">~/home/</li>
-          <li>projects/</li>
-          <li>experience/</li>
-         <!-- <li>portfolio/</li>
-          <li>me/</li> -->
-        </ul>
-        <div class="nav__buttons--right">
-          <img src="svg/github-icon.svg" class="nav__arrows">
-          <img src="svg/email-icon.svg" class="nav__arrows">
-      </div>
-      </nav>
-    </header>
-    <main>
-      <div class="grid">
-        <svg width="5" height="200" xmlns="http://www.w3.org/2000/svg" class="line">
-          <line x1="1" y1="0" x2="1" y2="200" stroke="white" stroke-width="2"/>
-        </svg>
-        <svg width="5" height="100" xmlns="http://www.w3.org/2000/svg" class="line2">
-          <line x1="1" y1="0" x2="1" y2="200" stroke="white" stroke-width="2"/>
-        </svg>
-       <!-- <img src="profile.JPG" class="profile"> -->
-        <img src="star.svg" class="star">
-        <h1 class="info">hello<span style="font-size: 5rem;">.</span><br><span style="font-size: 4rem;">am <span class="intro__name">Christine</span> :)</span></p>
-          <!-- <p class="info-box">enthusiastic about learning and creativity.<br>and currently studying</p>
-          <h2 class="grid-item">web development</h2> -->
-          <!-- <p class="grid-item2">✦✦✧ in progress</p> --> 
-      </div>
-
-      <!-- <span class="rotated-text">copyright christine ky nguyen tihi</span>
-       navigate using the arrows <- -> if you're interested -->
-    </main>
-  </div>
-</body>
-
+         <!-- <p class="grid-item"><span>a web developer</span> in progress</p>
+          <img src="svg/loading-icon.svg" class="loading-icon" /> --> 
+        </main>
+       <!-- <footer>&#169; 2024 Christine Ky Nguyen
+        </footer>  -->
+        </div>
+    </div>
+  </body>
 </html>

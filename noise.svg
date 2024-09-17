@@ -6,9 +6,9 @@
     <filter id='n' x='0' y='0'>
             <feTurbulence
               type='fractalNoise'
-              baseFrequency='0.75'
+              baseFrequency='0.8'
               stitchTiles='stitch'/>
     </filter>
 
-    <rect width='300' height='300' filter="url(#n)" opacity='0.4'/>
+    <rect width='300' height='300' filter="url(#n)" opacity='0.2'/>
 </svg>
