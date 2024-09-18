@@ -1,61 +1,64 @@
-@font-face {
-  font-family: "Wiskind";
-  src: url("OpenType-TT/Wiskind.ttf"), format("ttf");
+@mixin background-settings($gradient-start, $gradient-end) {
+  background-image: url(svg/noise.svg),
+    linear-gradient($gradient-start, $gradient-end);
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: top left, center;
 }
 
 :root {
   --pink: #cb108d;
   --dark-blue: #2e2f58;
+  --baby-blue: #86adec;
 }
 
-     * {
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Roboto Mono";
-        font-size: 16px;
-      }
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono";
+  font-size: 16px;
+}
 
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-image: url("noise.svg"), linear-gradient(var(--dark-blue), #86adec);
-        background-size: auto, cover;
-        background-repeat: repeat, no-repeat;
-        background-attachment: fixed, fixed;
-        background-position: top left, center;
-      }
+body {
+  @include background-settings(var(--dark-blue), var(--baby-blue));
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      .box {
-        width: 98vw;
-        height: 98%;
-        background-color: black;
-        color: white;
-        border: 2.5px solid white;
-        border-radius: 10px;
-        background-image: url("noise.svg"), linear-gradient(#06070d, #4f5172);
-        background-size: auto, cover;
-        background-repeat: repeat, no-repeat;
-        background-attachment: fixed, fixed;
-        background-position: top left, center;
-      }
+.container {
+  @include background-settings(#06070d, #4f5172);
+  width: 98vw;
+  height: 98%;
+  color: white;
+  border: 2.5px solid white;
+  border-radius: 10px;
+}
 
 .menu {
-  position: relative;
-  border: solid rgba(255, 255, 255, 0.2) 2px;
   width: 60%;
-  // display: grid;
-  // grid-template-columns: repeat(3, auto); /* Adjust the number of columns as needed */
   display: flex;
-  justify-content: space-between; /* Centers the grid within the container */
+  justify-content: space-between;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.2);
+  border: solid rgba(255, 255, 255, 0.2) 2px;
   border-radius: 50px / 50px;
-  padding: 0 2%;
+  padding: 0.2% 2%;
 
   &:hover {
     border: solid var(--pink) 2px;
     background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  a {
+    width: 100%;
+    font-size: 1.5rem;
   }
 }
 
@@ -68,36 +71,32 @@
 .dropdown__content {
   display: none;
   position: absolute;
-  background-color: var(--dark-blue);
-  width: 80%;
-  top: 0;
-  left: 0;
-  border-radius: 50px / 50px;
-
+  width: 102%;
+  top: -5%;
+  border-radius: 18px;
+  left: -1%;
+  padding: 1vw 0;
+  @include background-settings(var(--dark-blue), var(--baby-blue));
+  z-index: 2;
 }
 
 nav {
-    padding: 1% 0;
-    width: 95vw;
-    border-radius: 10px;
-    display: flex;
-      justify-content: space-between; /* Distributes space between items */
-      align-items: center;  
-    // background-color: rgb(109, 123, 109);
+  padding: 1% 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* nav::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    background-color: black;
-} */
+.nav__buttons--right {
+  display: flex;
+  align-items: center;
+}
+
 main {
-    height: 90%;
-&::before {
-    content: '';
+  height: 90%;
+  &::before {
+    content: "";
     display: block;
     width: 97.8vw;
     padding: 0;
@@ -108,7 +107,6 @@ main {
 a {
   display: inline-block;
   padding: 0 2%;
-  font-size: 1.5rem;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -123,18 +121,12 @@ li {
   text-decoration: none;
 }
 
-.container {
-position: relative;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   width: 100%;
-  // padding: 0 5%;
-  height: 100%; /* Ensure the grid takes up the full height of the .box */
-  position: relative;
+  height: 100%;
 }
 
 .grid-item {
@@ -142,15 +134,6 @@ position: relative;
   grid-column: 3;
   grid-row: 8;
   width: 50%;
-}
-
-.grid-item2 {
-  align-self: center;
-  font-size: 2rem;
-  font-family: "Wiskind";
-  color: white;
-  margin-top: 2%;
-  // text-align: right;
 }
 
 .info {
@@ -172,25 +155,23 @@ position: relative;
       font-size: 3.2rem;
       width: 16ch;
     }
-    
   }
-
 }
 
 .name::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   // padding-bottom: 1.5vw;
   border-top: white solid 5px;
-  border-image: linear-gradient(to right, white,#d80b77) 1 0 0 0;
+  border-image: linear-gradient(to right, white, #d80b77) 1 0 0 0;
 }
 
 .info-box {
   grid-column: 2;
-  grid-row: 4; 
+  grid-row: 4;
   font-size: 1.5rem;
-  font-family: 'Mulish';
+  font-family: "Mulish";
 }
 
 .intro__name {
@@ -198,7 +179,7 @@ position: relative;
   color: var(--pink);
 }
 
-.profile {
+.profile-pic {
   grid-column: 9;
   grid-row: 7;
   width: 45%;
@@ -209,40 +190,13 @@ position: relative;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-
-.slide {
-  position: absolute;
-  color: white;
-  bottom: 4px;
-  right: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rotated-text {
-    position: absolute;
-    left: 20px; /* Adjust as needed for alignment */
-    top: 20px; /* Adjust as needed for alignment */
-    transform: rotate(-45deg); /* Rotate text diagonally */
-    transform-origin: left top; /* Set rotation point to the top-left corner */
-    white-space: nowrap; /* Prevent text from wrapping */
-}
-
-.flower {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.nav__arrows {
+.nav__icon {
   width: 2.5vw;
   margin-left: 2rem;
 }
 
-.nav__buttons--left, .nav__buttons--right {
+.nav__buttons--left,
+.nav__buttons--right {
   width: 20%;
 }
 
@@ -256,21 +210,15 @@ position: relative;
   font-size: 2rem;
 }
 
-.loading-icon {
-  width: 15%;
-  padding-left: 1vw;
-}
-
 .note {
   display: grid;
   width: 100%;
   height: 100%;
   grid-row: 8;
   grid-column: 9;
-  // background-color: #2f3557;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  border-radius: 10px; 
-  border: solid #86adec 2px;
+  border-radius: 10px;
+  border: solid var(--baby-blue) 2px;
   margin-top: 1vw;
 
   p {
@@ -278,7 +226,7 @@ position: relative;
     overflow: auto;
     font-size: 1.2rem;
     width: 40ch;
-    color: #86adec;
+    color: var(--baby-blue);
   }
 }
 
@@ -286,21 +234,15 @@ position: relative;
   font-size: 1.9rem;
   line-height: 0.6;
   display: flex;
-align-items: start;
-// color: var(--pink);
-color: #86adec;
+  align-items: start;
+  color: var(--baby-blue);
 }
 
 .front__nav--span {
   font-size: 1.4rem;
-display: flex;
-align-items: end;
-width: 32ch;
-}
-
-footer {
-padding: 1%;
-font-size: 0.5rem;
+  display: flex;
+  align-items: end;
+  width: 32ch;
 }
 
 .navi {
@@ -317,4 +259,22 @@ font-size: 0.5rem;
 
 .arrow--down {
   width: 2vw;
+}
+
+label {
+  position: relative;
+  width: 100px;
+  height: 25px;
+  background-color: var(--baby-blue);
+  border-radius: 25px / 25px;
+}
+
+input {
+  display: none;
+}
+
+.nav__icons--border {
+  display: flex;
+  border: white solid 2px;
+  border-radius: 25px;
 }

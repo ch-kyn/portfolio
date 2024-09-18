@@ -18,54 +18,43 @@
     />
   </head>
 
-  <body>
-    <div class="box">
+  <body></body>
+    <div class="container">
       <!-- <img src="curve.svg" class="test"> -->
       <header>
         <nav>
           <div class="nav__buttons--left">
-            <img src="svg/arrow--left.svg" class="nav__arrows" />
-            <img src="svg/arrow--right.svg" class="nav__arrows" />
-            <a href="index.html"><img src="svg/home.svg" alt="home icon" class="nav__arrows"/></a>
+            <img src="svg/arrow--left.svg" class="nav__icon">
+            <img src="svg/arrow--right.svg" class="nav__icon">
+            <a href="index.html"><img src="svg/home.svg" alt="home icon" class="nav__icon"></a>
           </div>
           <ul class="menu">
-            <li class="nav--active"><a href="#">~/home/</a></li>
-            <button class="dropdown__button"><img src="svg/arrow--down.svg" alt="" class="arrow--down"></button>
+            <li class="nav--active">home/</li>
+            <img src="svg/arrow--down.svg" alt="" class="dropdown__button arrow--down">
             <div class="dropdown__content">
-              <li class=""><a href="#">/projects</a></li>
-              <li class=""><a href="#">/experience</a></li>
+              <li class="nav--active"><a href="#">~/</a></li>
+              <li class=""><a href="projects.html">./projects</a></li>
+              <li class=""><a href="projects.html">./experience</a></li>
             </div>
           </ul>
           <div class="nav__buttons--right">
+            <div class="nav__icons--border">
             <a href="https://github.com/ch-kyn">
-              <img src="svg/github-icon.svg" alt="GitHub icon" class="nav__arrows"/>
+              <img src="svg/github-icon.svg" alt="GitHub icon" class="nav__icon">
             </a>
-            <img
-              src="svg/email-icon.svg"
-              alt="email icon"
-              class="nav__arrows"
-            />
-            <svg
-              width="5"
-              height="30"
-              xmlns="http://www.w3.org/2000/svg"
-              class="nav__arrows"
-            >
-              <line
-                x1="1"
-                y1="0"
-                x2="1"
-                y2="30"
-                stroke="white"
-                stroke-width="2"
-              />
+            <img src="svg/email-icon.svg" alt="email icon" class="nav__icon">
+          </div>
+            <svg width="5" height="30" xmlns="http://www.w3.org/2000/svg" class="nav__icon">
+              <line x1="1" y1="0" x2="1" y2="30" stroke="white" stroke-width="2"></line>
             </svg>
+            <input type="checkbox">
+            <label for="darkmode-toggle"></label>
           </div>
         </nav>
       </header>
       <main>
         <div class="grid">
-          <img src="profile.JPG" class="profile">
+          <img src="profile.JPG" class="profile-pic">
           <div class="note">
             <p>
               currently studying web development at NTNU Gjøvik, and would
@@ -82,23 +71,20 @@
             <div class="navi">
             <h2 class="front__nav">projects</h2>
             <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"/>
+              <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"></polygon>
                </svg>
           </div>
           <div class="navi2">
             <h2 class="front__nav">experience</h2>
             <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"/>
+              <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"></polygon>
             </svg>
           </div>
           </div>
         </div>
-         <!-- <p class="grid-item"><span>a web developer</span> in progress</p>
-          <img src="svg/loading-icon.svg" class="loading-icon" /> --> 
         </main>
        <!-- <footer>&#169; 2024 Christine Ky Nguyen
         </footer>  -->
         </div>
-    </div>
-  </body>
+</body>
 </html>
