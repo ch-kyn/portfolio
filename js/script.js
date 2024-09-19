@@ -1,5 +1,5 @@
-const dropdownBtn = document.querySelector(".dropdown__button");
-const dropdownContent = document.querySelector(".dropdown__content");
+const dropdownBtn = document.querySelector(".arrow-down");
+const dropdown = document.querySelector(".menu__dropdown");
 const menu = document.querySelector("ul.menu");
 
 /* menu.addEventListener ("click", () => {
@@ -12,10 +12,10 @@ const menu = document.querySelector("ul.menu");
 })  */
 
 dropdownBtn.addEventListener ("click", () => {
-  if (dropdownContent.style.display === "none") {
-      dropdownContent.style.display = "block";
+  if (dropdown.style.display === "none") {
+      dropdown.style.display = "block";
     } else {
-      dropdownContent.style.display = "none";
+      dropdown.style.display = "none";
     }
 })
 

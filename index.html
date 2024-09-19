@@ -23,28 +23,32 @@
       <!-- <img src="curve.svg" class="test"> -->
       <header>
         <nav>
-          <div class="nav__buttons--left">
-            <img src="svg/arrow--left.svg" class="nav__icon">
-            <img src="svg/arrow--right.svg" class="nav__icon">
-            <a href="index.html"><img src="svg/home.svg" alt="home icon" class="nav__icon"></a>
+          <div class="nav__buttons">
+            <img src="svg/arrow--left.svg" alt="arrow left icon" class="nav__buttons--left">
+            <img src="svg/arrow--right.svg" alt="arrow right icon" class="nav__buttons--left">
+            <a href="index.html"><img src="svg/home.svg" alt="home icon" class="nav__buttons--left"></a>
           </div>
           <ul class="menu">
-            <li class="nav--active">home/</li>
-            <img src="svg/arrow--down.svg" alt="" class="dropdown__button arrow--down">
-            <div class="dropdown__content">
+            <li>home/</li>
+            <img src="svg/arrow--down.svg" alt="arrow dropdown menu icon" class="arrow-down">
+            <div class="menu__dropdown">
               <li class="nav--active"><a href="#">~/</a></li>
               <li class=""><a href="projects.html">./projects</a></li>
               <li class=""><a href="projects.html">./experience</a></li>
             </div>
           </ul>
-          <div class="nav__buttons--right">
-            <div class="nav__icons--border">
+          <div class="nav__buttons">
+            <div class="nav__highlight">
+              <div class="nav__icon">
             <a href="https://github.com/ch-kyn">
-              <img src="svg/github-icon.svg" alt="GitHub icon" class="nav__icon">
+              <img src="svg/github-icon.svg" alt="GitHub icon" class="nav__buttons--right">
             </a>
-            <img src="svg/email-icon.svg" alt="email icon" class="nav__icon">
+            </div>
+          <div class="nav__icon">
+            <img src="svg/email-icon.svg" alt="email icon" class="nav__buttons--right email-icon">
           </div>
-            <svg width="5" height="30" xmlns="http://www.w3.org/2000/svg" class="nav__icon">
+          </div>
+            <svg width="5" height="30" xmlns="http://www.w3.org/2000/svg">
               <line x1="1" y1="0" x2="1" y2="30" stroke="white" stroke-width="2"></line>
             </svg>
             <input type="checkbox">
@@ -54,7 +58,7 @@
       </header>
       <main>
         <div class="grid">
-          <img src="profile.JPG" class="profile-pic">
+          <img src="profile.JPG" alt="selfie of Christine" class="profile-pic">
           <div class="note">
             <p>
               currently studying web development at NTNU Gjøvik, and would
@@ -62,19 +66,19 @@
               creative and expanding my skillset in both front- and back-end development :)
             </p>
           </div>
-       <div class="line">+</div>
-          <div class="info--2">
+       <div class="plus">+</div>
+          <div class="intro">
             <h1 class="info">hello<span style="font-size: 5rem">.</span></h1>
             <h1 class="name">i'm <span class="intro__name">Christine*</span></h1>
           </div>
-          <div class="grid-item"><span class="front__nav--span">if interested, check out my</span>
-            <div class="navi">
+          <div class="intro__nav"><span class="front__nav--span">if interested, check out my</span>
+            <div class="intro__nav--top">
             <h2 class="front__nav">projects</h2>
             <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
               <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"></polygon>
                </svg>
           </div>
-          <div class="navi2">
+          <div class="intro__nav--bottom">
             <h2 class="front__nav">experience</h2>
             <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
               <polygon points="2.5,0 2.5,25 12.5,12.5" fill="#86adec"></polygon>
