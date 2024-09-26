@@ -1,11 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>hi</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/default.css" />
+    <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="overlay__content">
+        <div class="overlay__text">
+          <h2>Goal 13: Climate Action Website</h2>
+          <h3>overview</h3>
+          <p>
+            In IDG1292 - Webcoding, we were tasked to create a website for UN's
+            Sustainable Development Goal 13: Climate Action with focus on
+            responsiveness for both desktop and mobile with HTML and CSS. The
+            objective was to create a design and message that would've engage a
+            specific age group to advocate for the planet.
+          </p>
+          <h3>process</h3>
+          <p>
+            The target audience for the website was 14 to 16-year-olds, aiming for a
+            design that was fun but not childish. For the visual design, I used
+            bright colors, larger fonts, and color blocking, along with a
+            downloadable custom bingo game designed in Adobe Illustrator. I
+            selected Arial as the font for its readability on screens, and
+            ensured that the color combinations met WCAG standards to make the
+            site accessible.
+          </p>
+          <p>
+            The website was created with a mobile-first approach, building the layout with both grid
+            and flexbox. By using media queries and responsive units like `rem`
+            and percentages, the website adapts smoothly to different screen
+            sizes.
+          </p>
+          <h3>reflection</h3>
+          <p>This was the first complete website I had with a design direction etc. We got drilled about the DRY principle, and the importance of responsivness</p>
+          <h3>technologies</h3>
+          <span class="tech">
+            <i class="devicon-html5-plain"></i>
+            HTML
+          </span>
+          <span class="tech">
+            <i class="devicon-css3-plain"></i>
+            CSS
+          </span>
+        </div>
+        <!-- <button class="button--exit">X</button>  -->
+        <button class="button--exit">
+          <img src="svg/exit-cross.svg" alt="" class="button--exit" />
+        </button>
+        <img src="images/project1-long.png" class="ex" alt="" />
+      </div>
+    </div>
+    <div class="home-container">
+      <div class="container">
+        <header>
+          <nav>
+            <div class="nav__buttons">
+              <img
+                src="svg/arrow--left.svg"
+                alt="arrow left icon"
+                class="nav__buttons--arrow"
+              />
+              <img
+                src="svg/arrow--right.svg"
+                alt="arrow right icon"
+                class="nav__buttons--arrow icon-margin-r"
+              />
+              <div class="nav__icon nav__icon--home">
+                <a href="index.html"
+                  ><img
+                    src="svg/home.svg"
+                    alt="home icon"
+                    class="nav__buttons--left"
+                /></a>
+              </div>
+            </div>
+            <ul class="menu">
+              <li>projects/</li>
+              <img
+                src="svg/arrow--down.svg"
+                alt="arrow dropdown menu icon"
+                class="arrow-down"
+              />
+              <div class="menu__dropdown">
+                <li class="nav--active"><a href="#">~/</a></li>
+                <li><a href="projects.html">./projects</a></li>
+                <li><a href="projects.html">./experience</a></li>
+              </div>
+            </ul>
+            <div class="nav__buttons">
+              <div class="icon-wrap">
+                <div class="nav__icon">
+                  <a href="https://github.com/ch-kyn">
+                    <img
+                      src="svg/github-icon.svg"
+                      alt="GitHub icon"
+                      class="nav__buttons--right"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="nav__icon">
+                <img
+                  src="svg/email-icon.svg"
+                  alt="email icon"
+                  class="nav__buttons--right"
+                />
+              </div>
+              <svg
+                width="5"
+                height="30"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-margin-l"
+              >
+                <line
+                  x1="1"
+                  y1="0"
+                  x2="1"
+                  y2="30"
+                  stroke="white"
+                  stroke-width="2"
+                ></line>
+              </svg>
+              <!-- <input type="checkbox">
+            <label for="darkmode-toggle"></label> -->
+            </div>
+          </nav>
+        </header>
+        <main>
+          <!-- <h1>Projects</h1> -->
+          <div class="testblock">
+            <img src="images/project1.png" alt="" />
+            <div class="project-text">
+              <h2>Goal 13: Climate Action Website</h2>
+              <p>
+                In IDG1292 - Webcoding, we were tasked to create a website for
+                UN's Sustainable Development Goal 13: Climate Action with focus
+                on responsiveness for both desktop and mobile with HTML and CSS.
+                The objective was to create a design and message that would've
+                engage a specific age group to advocate for the planet.
+              </p>
+              <br />
+              <button class="button button--explore">Explore</button>
+              <button class="button">GitHub</button>
+              <button class="button">Live Site</button>
+            </div>
+          </div>
+
+          <div class="testblock">
+            <img src="images/project2.png" alt="" />
+            <div class="project-text">
+              <h2>Roots of Life</h2>
+              <p>
+                The task in IDG1293 - Advanced CSS was to create a complete
+                story told through scrolling and animations based on one of UN's
+                development goals. Our group chose Goal 15: Life on Land,
+                focusing on the issue of deforestation. CSS keyframes,
+                JavaScript, and GSAP were used to create the storytelling.
+              </p>
+              <br />
+              <button class="button button--explore">Explore</button>
+              <button class="button">GitHub</button>
+              <button class="button">Live Site</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>

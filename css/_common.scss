@@ -1,0 +1,137 @@
+@mixin background-settings($gradient-start, $gradient-end) {
+    background-image: url(../svg/noise.svg),
+    linear-gradient($gradient-start, $gradient-end);
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: top left, center;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono";
+    font-size: 16px;
+  }
+  
+  nav {
+    display: flex;
+    padding: 1% 0;
+  }
+  
+  .nav__buttons {
+    width: 20%;
+    display: flex;
+    align-items: center;
+  
+    &--arrow {
+      width: 2.2vw;
+      margin-left: 2rem;
+    }
+  
+    &--left {
+      width: 2.2vw;
+    }
+  
+    &--right {
+      width: 3.2vw;
+      padding: 0 10%;
+    }
+
+    a {
+      font-size: 0;
+    }
+  }
+  
+  .nav__icon,
+  .nav__icon--home {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 3vw;
+    z-index: 2;
+  
+    // to make round circle hover effect
+    &::after {
+      content: "";
+      width: 3vw;
+      height: 3vw;
+      position: absolute;
+      left: -3%;
+      top: -6%;
+      transition: all ease 0.5s;
+      background-color: var(--white);
+      border-radius: 50%;
+      padding: 6%;
+      z-index: -1;
+      opacity: 0;
+    }
+  
+    &:hover::after {
+      opacity: 0.2;
+    }
+  }
+  
+  .nav__icon--home::after {
+    // width: 3vw;
+    // height: 3vw;
+    position: absolute;
+    left: -22%;
+    top: -2%;
+  }
+  
+  .icon-wrap {
+    padding: 0 1vw;
+  }
+  
+  .arrow-down {
+    width: 2vw;
+  }
+  
+  .icon-margin-l {
+    margin-left: 2vw;
+  }
+  
+  .icon-margin-r {
+    margin-right: 2vw;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    padding: 0.2% 2%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid rgba(255, 255, 255, 0.2) 2px;
+    border-radius: 50px / 50px;
+  
+    a {
+      display: block;
+      width: 100%;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    &:hover {
+      border: solid var(--pink) 2px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  
+    &__dropdown {
+      @include background-settings(var(--dark-blue), var(--baby-blue));
+      display: none;
+      position: absolute;
+      z-index: 2;
+      width: 102%;
+      top: -5%;
+      left: -1%;
+      padding: 1vw 0;
+      border-radius: 18px;
+    }
+  }
