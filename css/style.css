@@ -369,10 +369,7 @@ input {
     width: 30ch;
   }
 }
-@media (max-width: 620px) {
-  .home-container {
-    height: 100%;
-  }
+@media (max-width: 640px) {
   .nav--hide {
     display: none;
   }
