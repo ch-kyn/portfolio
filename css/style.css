@@ -138,6 +138,10 @@ nav {
   font-size: 16px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @keyframes moveDown {
   0% {
     transform: translateY(100%);
@@ -221,6 +225,7 @@ main {
   width: 100%;
   height: 90%;
   position: relative;
+  justify-content: center;
 }
 
 .profile-pic {
@@ -373,6 +378,9 @@ input {
   .nav--hide {
     display: none;
   }
+  .nav {
+    width: 5% 0;
+  }
   .nav__buttons--left {
     width: 5vw;
     padding: 0 5%;
@@ -382,8 +390,8 @@ input {
   }
   .main-grid {
     flex-flow: column-reverse;
-    padding: 10% 5%;
-    gap: 5vw;
+    width: 100%;
+    height: 100%;
   }
   .nav__buttons--arrow {
     display: none;
@@ -417,7 +425,7 @@ input {
     padding-top: 0;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 350px) {
   :root {
     font-size: 10px;
   }
@@ -426,6 +434,10 @@ input {
   }
   .hello_to_you {
     font-size: 2.5rem;
+  }
+  .main-grid {
+    padding: 10% 5%;
+    gap: 5vw;
   }
   .intro__greeting::after {
     width: 20rem;
@@ -438,5 +450,8 @@ input {
   }
   .about-me > p {
     width: 30ch;
+  }
+  .profile-pic {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
