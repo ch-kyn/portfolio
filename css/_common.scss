@@ -23,7 +23,7 @@
     width: 20%;
     display: flex;
     align-items: center;
-  
+    
     &--arrow {
       width: 2.2vw;
       margin-left: 2rem;
@@ -32,7 +32,7 @@
     &--left {
       width: 2.2vw;
     }
-  
+    
     &--right {
       width: 3.2vw;
       padding: 0 10%;
@@ -49,8 +49,7 @@
     align-items: center;
     position: relative;
     height: 3vw;
-    z-index: 2;
-  
+    z-index: 2;  
     // to make round circle hover effect
     &::after {
       content: "";
@@ -76,11 +75,15 @@
     // width: 3vw;
     // height: 3vw;
     position: absolute;
-    left: -22%;
+    left: -24%;
     top: -2%;
   }
-  
-  .icon-wrap {
+
+  .icon-wrap1 {
+    padding: 0 1.5vw;
+  }
+
+  .icon-wrap2 {
     padding: 0 1vw;
   }
   
@@ -89,7 +92,7 @@
   }
   
   .icon-margin-l {
-    margin-left: 2vw;
+    margin: 0 1.2vw;
   }
   
   .icon-margin-r {
@@ -135,3 +138,10 @@
       border-radius: 18px;
     }
   }
+
+  .hide {
+    visibility: hidden;
+    font-size: 0;
+  }
+
+ 

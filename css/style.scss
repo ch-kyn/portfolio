@@ -105,7 +105,7 @@ main {
     grid-row: 5;
     align-self: end;
     line-height: 1.5;
-    width: 50ch;
+    width: 80ch;
     animation: moveDownWait 1.5s ease-in-out;
   
     span:nth-of-type(1) {
@@ -124,7 +124,7 @@ main {
     &::after {
       content: "";
       display: block;
-      width: 100%;
+      width: 65%;
       border-top: var(--white) solid 5px;
       border-image: linear-gradient(to right, var(--white), #d80b77) 1 0 0 0;
     }
@@ -135,7 +135,7 @@ main {
   display: grid;
   grid-column: 3;
   grid-row: 6;
-  width: 80%;
+  width: 65%;
   animation: introWait 2s linear;
 
   &--top {
