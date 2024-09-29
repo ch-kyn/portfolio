@@ -351,7 +351,7 @@ input {
 .flex-right {
   padding-left: 7%;
   width: 55%;
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 @media (max-width: 1200px) {
