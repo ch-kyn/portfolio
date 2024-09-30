@@ -67,7 +67,7 @@ nav {
 }
 
 .icon-wrap2 {
-  padding: 0 1vw;
+  padding: 0 1vw 0 2vw;
 }
 
 .arrow-down {
@@ -343,7 +343,7 @@ main {
 
 .socials {
   display: none;
-  gap: 5%;
+  gap: 6.5%;
 }
 .socials img {
   width: 25px;
