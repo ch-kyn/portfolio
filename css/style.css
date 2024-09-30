@@ -3,6 +3,7 @@
   box-sizing: border-box;
   font-family: "Roboto Mono";
   font-size: 16px;
+  max-width: 1920px;
 }
 
 nav {
@@ -15,20 +16,19 @@ nav {
   width: 20%;
   display: flex;
   align-items: center;
+  gap: 2%;
 }
 .nav__buttons--arrow {
   width: 2.2vw;
   margin-left: 2rem;
 }
 .nav__buttons--left {
-  width: 2.2vw;
+  width: 2.6vw;
+  height: 2.6vw;
 }
 .nav__buttons--right {
-  width: 3.2vw;
-  padding: 0 10%;
-}
-.nav__buttons a {
-  font-size: 0;
+  width: 2.6vw;
+  height: 2.6vw;
 }
 
 .nav__icon,
@@ -36,21 +36,20 @@ nav {
   display: flex;
   align-items: center;
   position: relative;
-  height: 3vw;
   z-index: 2;
 }
 .nav__icon::after,
 .nav__icon--home::after {
   content: "";
-  width: 3vw;
-  height: 3vw;
+  width: 140%;
+  height: 140%;
   position: absolute;
-  left: -3%;
-  top: -6%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
   transition: all ease 0.5s;
   background-color: var(--white);
   border-radius: 50%;
-  padding: 6%;
   z-index: -1;
   opacity: 0;
 }
@@ -58,11 +57,9 @@ nav {
 .nav__icon--home:hover::after {
   opacity: 0.2;
 }
-
-.nav__icon--home::after {
-  position: absolute;
-  left: -24%;
-  top: -2%;
+.nav__icon a,
+.nav__icon--home a {
+  font-size: 0;
 }
 
 .icon-wrap1 {
@@ -130,6 +127,24 @@ nav {
   font-size: 0;
 }
 
+@media (min-width: 1920px) {
+  /* .nav__icon::after {
+    width: 96px;
+    height: 96px;
+    left: -10%;
+  } */
+  .nav__buttons--arrow {
+    width: 60px;
+    margin-left: 2rem;
+  }
+  .nav__buttons--left {
+    width: 60px;
+  }
+  .nav__buttons--right {
+    width: 80px;
+    height: 80px;
+  }
+}
 @keyframes moveDown {
   0% {
     transform: translateY(100%);
@@ -230,7 +245,7 @@ main {
 }
 
 .profile-pic {
-  width: calc(150px + 6vw);
+  width: calc(125px + 6vw + 1vh);
   border-radius: 100%;
   justify-self: center;
   border: var(--pink) solid 6.5px;
@@ -244,19 +259,19 @@ main {
   animation: moveDownWait 1.5s ease-in-out;
 }
 .intro__greeting span:nth-of-type(1) {
-  font-size: clamp(2.4rem, 2vw + 1rem, 3rem);
+  font-size: clamp(2.3rem, 2vw + 1rem, 3rem);
   color: var(--white);
   margin-bottom: 1vw;
 }
 .intro__greeting span:nth-of-type(2) {
-  font-size: clamp(3.1rem, 2vw + 1rem, 3.7rem);
+  font-size: clamp(3rem, 2vw + 1rem, 3.7rem);
   color: var(--pink);
   margin-bottom: 1vw;
 }
 .intro__greeting::after {
   content: "";
   display: block;
-  width: 60%;
+  width: clamp(24rem, 20rem + 6vw, 30rem);
   border-top: var(--white) solid 5px;
   -o-border-image: linear-gradient(to right, var(--white), #d80b77) 1 0 0 0;
      border-image: linear-gradient(to right, var(--white), #d80b77) 1 0 0 0;
@@ -273,6 +288,7 @@ main {
   justify-content: space-between;
   padding-top: 5%;
   white-space: nowrap;
+  line-height: 0.6;
 }
 .intro__nav span {
   font-size: 1.4rem;
@@ -282,8 +298,7 @@ main {
 }
 
 .projects-link {
-  font-size: clamp(1.3rem, 1rem + 2vw, 1.9rem);
-  line-height: 0.6;
+  font-size: 2rem;
   display: flex;
   align-items: start;
   color: var(--baby-blue);
@@ -295,7 +310,7 @@ main {
 
 .hello_to_you {
   line-height: 1;
-  font-size: clamp(2.6rem, 2vw + 1rem, 3.2rem);
+  font-size: clamp(2.5rem, 2vw + 1rem, 3.2rem);
   font-weight: bold;
   color: #adabb7;
   animation: moveDown 1s ease-in-out;
@@ -328,11 +343,10 @@ main {
 
 .socials {
   display: none;
-  gap: 5%;
-  padding: 5% 0;
+  gap: 6.5%;
 }
 .socials img {
-  width: 5vw;
+  width: 25px;
 }
 
 .flex-ya {
@@ -351,20 +365,39 @@ main {
   padding-top: 7%;
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1920px) {
   :root {
-    font-size: clamp(18px, 10px + 2vw, 30px); /* Adjust as needed */
+    font-size: 18px;
   }
-  .container {
-    width: 80vw;
+  HTML {
+    margin: 0 auto;
+  }
+  .nav-buttons--right {
+    width: 200px;
   }
   .flex-left {
     margin-right: 2vw;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
+  /* .profile-pic {
+    width: calc(125px + 6vw + 1vh);
+  } */
+}
+@media (max-width: 900px) {
   :root {
     font-size: 10px;
+  }
+}
+@media (max-width: 1000px) and (orientation: landscape) {
+  :root {
+    font-size: 9px; /* Set the root font size to 10px */
+  }
+  .profile-pic {
+    width: calc(145px - 2vw);
   }
 }
 @media (max-width: 640px) {
@@ -380,25 +413,29 @@ main {
   }
   .nav__buttons {
     width: 10%;
+    font-size: 0;
   }
   .nav__buttons--left {
-    width: 5vw;
-    padding: 0 5%;
+    width: calc(12px + 2vw);
+    height: calc(12px + 2vw);
   }
   .main-grid {
     flex-flow: column-reverse;
+    gap: 4%;
   }
   .flex-left {
     align-self: center;
   }
   .profile-pic {
-    margin: 5% 0;
+    margin-bottom: 10%;
   }
   .socials {
     display: flex;
+    padding-top: 5%;
   }
   .intro__nav--top {
-    padding: 10% 0;
+    padding: 5% 0 12% 0;
+    line-height: 1;
   }
   .intro__nav span {
     display: none;
@@ -409,8 +446,8 @@ main {
   .flex-right {
     padding-top: 0;
   }
-  .intro__greeting::after {
-    width: 20rem;
+  li {
+    font-size: 2rem;
   }
 }
 @media (max-width: 350px) {

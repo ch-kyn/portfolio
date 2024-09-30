@@ -62,7 +62,7 @@ main {
 
 .profile-pic {
   // width: clamp(160px, 20vw + 60px, 48%);
-  width: calc(150px + 6vw);
+  width: calc(125px + 6vw + 1vh);
   border-radius: 100%;
   justify-self: center;
   border: var(--pink) solid 6.5px;
@@ -77,13 +77,13 @@ main {
     animation: moveDownWait 1.5s ease-in-out;
 
     span:nth-of-type(1) {
-      font-size: clamp(2.4rem, 2vw + 1rem, 3rem);
+      font-size: clamp(2.3rem, 2vw + 1rem, 3rem);
       color: var(--white);
       margin-bottom: 1vw;
     }
 
     span:nth-of-type(2) {
-      font-size: clamp(3.1rem, 2vw + 1rem, 3.7rem);
+      font-size: clamp(3rem, 2vw + 1rem, 3.7rem);
       color: var(--pink);
       margin-bottom: 1vw;
     }
@@ -91,7 +91,7 @@ main {
     &::after {
       content: "";
       display: block;
-      width: 60%;
+      width: clamp(24rem, 20rem + 6vw, 30rem);
       border-top: var(--white) solid 5px;
       border-image: linear-gradient(to right, var(--white), #d80b77) 1 0 0 0;
     }
@@ -109,6 +109,7 @@ main {
     justify-content: space-between;
     padding-top: 5%;
     white-space: nowrap;
+    line-height: 0.6;
   }
 
   span {
@@ -120,8 +121,7 @@ main {
 }
 
 .projects-link {
-  font-size: clamp(1.3rem, 1rem + 2vw, 1.9rem);
-  line-height: 0.6;
+  font-size: 2rem;
   display: flex;
   align-items: start;
   color: var(--baby-blue);
@@ -134,7 +134,7 @@ main {
 
 .hello_to_you {
   line-height: 1;
-  font-size: clamp(2.6rem, 2vw + 1rem, 3.2rem);
+  font-size: clamp(2.5rem, 2vw + 1rem, 3.2rem);
   font-weight: bold;
   color: #adabb7;
   animation: moveDown 1s ease-in-out;
@@ -168,11 +168,10 @@ main {
 
 .socials {
   display: none;
-  gap: 5%;
-  padding: 5% 0;
+  gap: 6.5%;
 
   img {
-    width: 5vw;
+    width: 25px;
   }
 }
 
@@ -193,13 +192,16 @@ main {
   padding-top: 7%;
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1920px) {
   :root {
-    font-size: clamp(18px, 10px + 2vw, 30px); /* Adjust as needed */
+    font-size: 18px;
   }
 
-  .container {
-    width: 80vw;
+  HTML {
+    margin: 0 auto;
+  }
+  .nav-buttons--right {
+    width: 200px;
   }
 
   .flex-left {
@@ -207,10 +209,29 @@ main {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
+
+  /* .profile-pic {
+    width: calc(125px + 6vw + 1vh);
+  } */
+} 
+
+@media (max-width: 900px) {
   :root {
     font-size: 10px;
   }
+} 
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  :root {
+    font-size: 9px; /* Set the root font size to 10px */
+  }
+  .profile-pic {
+    width: calc(145px - 2vw);
+}
 }
 
 @media (max-width: 640px) {
@@ -230,16 +251,18 @@ main {
   .nav {
     &__buttons {
       width: 10%;
+      font-size: 0;
 
       &--left {
-        width: 5vw;
-        padding: 0 5%;
+        width: calc(12px + 2vw);
+        height: calc(12px + 2vw);
       }
     }
   }
 
   .main-grid {
     flex-flow: column-reverse;
+    gap: 4%;
   }
 
   .flex-left {
@@ -247,16 +270,18 @@ main {
   }
 
   .profile-pic {
-    margin: 5% 0;
+    margin-bottom: 10%;
   }
 
   .socials {
     display: flex;
+    padding-top: 5%;
   }
 
   .intro__nav {
     &--top {
-      padding: 10% 0;
+      padding: 5% 0 12% 0;
+      line-height: 1;
     }
     span {
       display: none;
@@ -271,8 +296,8 @@ main {
     padding-top: 0;
   }
 
-  .intro__greeting::after {
-    width: 20rem;
+  li {
+    font-size: 2rem;
   }
 }
 

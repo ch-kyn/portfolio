@@ -12,6 +12,7 @@
     box-sizing: border-box;
     font-family: "Roboto Mono";
     font-size: 16px;
+    max-width: 1920px;
   }
   
   nav {
@@ -24,6 +25,7 @@
     width: 20%;
     display: flex;
     align-items: center;
+    gap: 2%;
     
     &--arrow {
       width: 2.2vw;
@@ -31,16 +33,14 @@
     }
   
     &--left {
-      width: 2.2vw;
+      width: 2.6vw;
+      height: 2.6vw;
     }
     
     &--right {
-      width: 3.2vw;
-      padding: 0 10%;
-    }
-
-    a {
-      font-size: 0;
+      width: 2.6vw;
+      height: 2.6vw;
+      ;
     }
   }
   
@@ -49,20 +49,19 @@
     display: flex;
     align-items: center;
     position: relative;
-    height: 3vw;
     z-index: 2;  
     // to make round circle hover effect
     &::after {
       content: "";
-      width: 3vw;
-      height: 3vw;
+      width: 140%;
+      height: 140%;
       position: absolute;
-      left: -3%;
-      top: -6%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;  
       transition: all ease 0.5s;
       background-color: var(--white);
       border-radius: 50%;
-      padding: 6%;
       z-index: -1;
       opacity: 0;
     }
@@ -70,16 +69,11 @@
     &:hover::after {
       opacity: 0.2;
     }
-  }
-  
-  .nav__icon--home::after {
-    // width: 3vw;
-    // height: 3vw;
-    position: absolute;
-    left: -24%;
-    top: -2%;
-  }
 
+    a {
+      font-size: 0;
+    }
+  }
   .icon-wrap1 {
     padding: 0 1.5vw;
   }
@@ -145,4 +139,27 @@
     font-size: 0;
   }
 
- 
+ @media (min-width: 1920px) {
+  
+  /* .nav__icon::after {
+    width: 96px;
+    height: 96px;
+    left: -10%;
+  } */
+
+  .nav__buttons {
+  &--arrow {
+    width: 60px;
+    margin-left: 2rem;
+  }
+
+  &--left {
+    width: 60px;
+  }
+  
+  &--right {
+    width: 80px;
+    height: 80px;
+  }
+  }
+ }
