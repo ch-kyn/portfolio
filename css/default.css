@@ -130,14 +130,6 @@ nav {
   font-size: 0;
 }
 
-:root {
-  --pink: #cb108d;
-  --dark-blue: #2e2f58;
-  --baby-blue: #86adec;
-  --white: #efefef;
-  font-size: 16px;
-}
-
 @keyframes moveDown {
   0% {
     transform: translateY(100%);
@@ -170,6 +162,18 @@ nav {
     opacity: 1;
   }
 }
+:root {
+  --pink: #cb108d;
+  --dark-blue: #2e2f58;
+  --baby-blue: #86adec;
+  --white: #efefef;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(../svg/noise.svg), linear-gradient(var(--dark-blue), var(--baby-blue));
   background-size: auto, cover;
@@ -221,6 +225,7 @@ main {
   width: 100%;
   height: 90%;
   position: relative;
+  justify-content: center;
 }
 
 .profile-pic {
@@ -259,18 +264,18 @@ main {
 .intro__nav {
   width: 65%;
   animation: introWait 2s linear;
-  padding-top: 1vw;
+  padding-top: 2vw;
 }
 .intro__nav--top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1vw;
+  padding-top: 5%;
+  white-space: nowrap;
 }
 .intro__nav span {
   font-size: 1.4rem;
   display: flex;
-  align-items: end;
   width: 32ch;
   font-family: "Space Mono";
 }
@@ -282,6 +287,9 @@ main {
   align-items: start;
   color: var(--baby-blue);
   font-family: "Space Mono";
+}
+.front-nav:hover {
+  opacity: 0.6;
 }
 
 .hello_to_you {
@@ -328,19 +336,30 @@ main {
 input {
   display: none;
 } */
+.socials {
+  display: none;
+  gap: 5%;
+  padding: 5% 0;
+}
+.socials img {
+  width: 5vw;
+}
+
 .flex-ya {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
 }
 
 .flex-left {
   align-items: center;
+  width: 45%;
 }
 
 .flex-right {
-  padding-left: 5%;
+  padding-left: 7%;
+  width: 55%;
+  padding-top: 7%;
 }
 
 @media (max-width: 1200px) {
@@ -353,24 +372,34 @@ input {
     font-size: 10px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .about-me > p {
     width: 30ch;
   }
 }
-@media (max-width: 600px) {
-  .home-container {
-    height: 100%;
+@media (max-width: 640px) {
+  .nav--hide {
+    display: none;
+  }
+  .nav {
+    width: 5% 0;
+  }
+  .nav__buttons--left {
+    width: 5vw;
+    padding: 0 5%;
+  }
+  .nav__buttons {
+    width: 10%;
   }
   .main-grid {
     flex-flow: column-reverse;
-    padding: 5%;
-    gap: 5vw;
+    width: 100%;
+    height: 100%;
   }
   .nav__buttons--arrow {
     display: none;
   }
-  .nav__buttons {
+  .nav__buttons--right {
     display: none;
   }
   .flex-left {
@@ -379,16 +408,54 @@ input {
   .about-me > p {
     width: 40ch;
   }
+  .profile-pic {
+    width: 80%;
+    margin: 5% 0;
+  }
+  .socials {
+    display: flex;
+  }
+  .intro__nav--top {
+    padding: 10% 0;
+  }
+  .intro__nav span {
+    display: none;
+  }
+  .menu {
+    width: 80%;
+  }
+  .flex-right {
+    padding-top: 0;
+  }
 }
-@media (max-width: 300px) {
+@media (max-width: 350px) {
+  :root {
+    font-size: 10px;
+  }
+  .front-nav {
+    font-size: 1.2rem;
+  }
   .hello_to_you {
     font-size: 2.5rem;
+  }
+  .main-grid {
+    padding: 10% 5%;
+    gap: 5vw;
+  }
+  .intro__greeting::after {
+    width: 20rem;
   }
   .intro__greeting span:nth-of-type(1) {
     font-size: 2rem;
   }
   .intro__greeting span:nth-of-type(2) {
     font-size: 2.5rem;
+  }
+  .about-me > p {
+    width: 30ch;
+  }
+  .profile-pic {
+    width: 100%;
   }
 }
 main {

@@ -1,0 +1,36 @@
+@keyframes moveDown {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes moveDownWait {
+    0%,
+    49% {
+      visibility: hidden;
+    }
+    50% {
+      display: block;
+      transform: translateY(50%); /* Start 100px above its original position */
+    }
+    100% {
+      transform: translateY(0); /* End 100px below its original position */
+    }
+  }
+  
+  @keyframes introWait {
+    0%,
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
