@@ -1,14 +1,6 @@
 @use "common.scss";
 @use "animations.scss";
 
-:root {
-  --pink: #cb108d;
-  --dark-blue: #2e2f58;
-  --baby-blue: #86adec;
-  --white: #efefef;
-  font-size: 16px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -18,10 +10,8 @@ body {
 }
 
 .home-container {
+  @include common.flex-center-align(true, true);
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 a {
@@ -43,30 +33,27 @@ li {
   width: 98vw;
   height: 96%;
   color: var(--white);
-  border: 2.5px solid var(--white);
-  border-radius: 10px;
+  border: common.$border-white;
+  border-radius: common.$border-radius-default;
 }
 
 main {
-  border-top: var(--white) solid 2.5px;
+  border-top: common.$border-white;
 }
 
 .main-grid {
-  display: flex;
-  width: 100%;
+  @include common.flex-center-align(false, true);
   height: 90%;
   position: relative;
-  justify-content: center;
   padding: 0 7%;
 }
 
 .profile-pic {
-  // width: clamp(160px, 20vw + 60px, 48%);
   width: calc(125px + 6vw + 1vh);
   border-radius: 100%;
   justify-self: center;
   border: var(--pink) solid 6.5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: common.$shadow-default;
   animation: introWait 2s linear;
 }
 
@@ -93,7 +80,7 @@ main {
       display: block;
       width: clamp(24rem, 20rem + 6vw, 30rem);
       border-top: var(--white) solid 5px;
-      border-image: linear-gradient(to right, var(--white), #d80b77) 1 0 0 0;
+      border-image: linear-gradient(to right, var(--white), var(--pink)) 1 0 0 0;
     }
   }
 }
@@ -101,11 +88,10 @@ main {
 .intro__nav {
   width: 65%;
   animation: introWait 2s linear;
-  padding-top: 2vw;
+  padding-top: 1.5rem;
 
   &--top {
-    display: flex;
-    align-items: center;
+    @include common.flex-center-align(true, false);
     justify-content: space-between;
     padding-top: 5%;
     white-space: nowrap;
@@ -128,7 +114,7 @@ main {
   font-family: "Space Mono";
 
   &:hover {
-    opacity: 0.6;
+    color: var(--baby-blue-v2);
   }
 }
 
@@ -136,14 +122,14 @@ main {
   line-height: 1;
   font-size: clamp(2.5rem, 2vw + 1rem, 3.2rem);
   font-weight: bold;
-  color: #adabb7;
+  color: var(--light-grey);
   animation: moveDown 1s ease-in-out;
   margin-top: 2vw;
 }
 
 .plus {
   font-size: 2rem;
-  margin: 2vw;
+  margin: 2rem;
   opacity: 0.2;
   position: absolute;
   left: 0;
@@ -154,15 +140,38 @@ main {
   margin-top: 1vw;
   color: var(--baby-blue);
   border: solid var(--baby-blue) 2px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: common.$border-radius-default;
+  box-shadow: common.$shadow-default;
   animation: introWait 2s linear;
 
-  p {
+  p,
+  .highlight {
     font-size: clamp(0.8rem, 10px + 1vw, 1.1rem);
-    padding: 3%;
     width: calc(37ch + 2vw);
     overflow: auto;
+  }
+
+  p {
+    padding: 3%;
+  }
+
+  .highlight {
+    color: var(--baby-blue-v2);
+  }
+}
+
+.main-cont {
+  @include common.flex-center-align(false, true);
+  flex-direction: column;
+
+  &--left {
+    width: 60%;
+    padding-top: 7%;
+  }
+
+  &--right {
+    align-items: center;
+    width: 40%;
   }
 }
 
@@ -175,37 +184,25 @@ main {
   }
 }
 
-.flex-ya {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.flex-left {
-  align-items: center;
-  width: 40%;
-  // margin: 0 5%;
-}
-
-.flex-right {
-  width: 60%;
-  padding-top: 7%;
-}
-
 @media (min-width: 1920px) {
   :root {
-    font-size: 18px;
+    font-size: 24px;
   }
 
-  HTML {
+  html {
     margin: 0 auto;
   }
+
   .nav-buttons--right {
     width: 200px;
   }
 
-  .flex-left {
+  .main-cont--right {
     margin-right: 2vw;
+  }
+
+  .profile-pic {
+    width: 350px;
   }
 }
 
@@ -214,24 +211,26 @@ main {
     font-size: 14px;
   }
 
-  /* .profile-pic {
-    width: calc(125px + 6vw + 1vh);
-  } */
-} 
+  .testblock {
+    grid-template-columns: 1fr; /* Change to single column layout */
+    grid-template-rows: auto auto; /* Stack the rows (image on top, text below) */
+  }
+}
 
 @media (max-width: 900px) {
   :root {
     font-size: 10px;
   }
-} 
+}
 
 @media (max-width: 1000px) and (orientation: landscape) {
   :root {
-    font-size: 9px; /* Set the root font size to 10px */
+    font-size: 9px;
   }
+
   .profile-pic {
     width: calc(145px - 2vw);
-}
+  }
 }
 
 @media (max-width: 640px) {
@@ -239,13 +238,9 @@ main {
   nav {
     padding: 2.5% 0;
   }
+
   .container {
     width: 98%;
-  }
-
-  .nav--hide,
-  .nav__buttons--arrow {
-    display: none;
   }
 
   .nav {
@@ -253,11 +248,15 @@ main {
       width: 10%;
       font-size: 0;
 
-      &--left {
+      &-size {
         width: calc(12px + 2vw);
         height: calc(12px + 2vw);
       }
     }
+  }
+  .nav--hide,
+  .nav__buttons--arrow {
+    display: none;
   }
 
   .main-grid {
@@ -265,7 +264,7 @@ main {
     gap: 4%;
   }
 
-  .flex-left {
+  .main-cont--right {
     align-self: center;
   }
 
@@ -283,6 +282,7 @@ main {
       padding: 5% 0 12% 0;
       line-height: 1;
     }
+
     span {
       display: none;
     }
@@ -290,9 +290,13 @@ main {
 
   .menu {
     width: 80%;
+    &__dropdown {
+    width: 104%;
+    left: -2%;
+    }
   }
 
-  .flex-right {
+  .main-cont--left {
     padding-top: 0;
   }
 

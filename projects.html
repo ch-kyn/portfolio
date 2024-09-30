@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/projects.css" />
     <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -139,73 +139,39 @@
         <header>
           <nav>
             <div class="nav__buttons">
-              <img
-                src="svg/arrow--left.svg"
-                alt="arrow left icon"
-                class="nav__buttons--arrow"
-              />
-              <img
-                src="svg/arrow--right.svg"
-                alt="arrow right icon"
-                class="nav__buttons--arrow icon-margin-r"
-              />
-              <div class="nav__icon nav__icon--home">
-                <a href="index.html"
-                  ><img
-                    src="svg/home.svg"
-                    alt="home icon"
-                    class="nav__buttons--left"
-                /></a>
-              </div>
+              <img src="svg/arrow--left.svg" alt="arrow left icon" class="nav__buttons--arrow" />
+              <img src="svg/arrow--right.svg" alt="arrow right icon" class="nav__buttons--arrow icon-margin-r" />
+              <span class="nav__icon nav__icon--home" title="Home">
+                <a href="index.html"><img src="svg/home.svg" alt="link to homepage" class="nav__buttons-size" /></a>
+              </span>
             </div>
-            <ul class="menu">
-              <li>projects/</li>
-              <img
-                src="svg/arrow--down.svg"
-                alt="arrow dropdown menu icon"
-                class="arrow-down"
-              />
-              <div class="menu__dropdown">
-                <li class="nav--active"><a href="#">~/</a></li>
-                <li><a href="projects.html">./projects</a></li>
+            <ul class="menu" aria-label="Main Navigation">
+              <li class="menu--active">projects/</li>
+              <img src="svg/arrow--down.svg" alt="arrow dropdown menu icon" class="nav__buttons-size arrow-down" />
+              <div class="menu__dropdown" aria-label="Dropdown Menu">
+                <li><a href="index.html">~</a></li>
+                <li><a href="#">projects</a></li>
               </div>
             </ul>
-            <div class="nav__buttons">
-              <div class="icon-wrap">
-                <span class="nav__icon">
-                  <a href="https://github.com/ch-kyn">
-                    <img
-                      src="svg/github-icon.svg"
-                      alt="GitHub icon"
-                      class="nav__buttons--right"
-                    />
+            <div class="nav__buttons nav--hide">
+              <span class="icon-wrap">
+                <span class="nav__icon" title="GitHub">
+                  <a href="https://github.com/ch-kyn" target="_blank">
+                    <img src="svg/github-icon.svg" alt="GitHub link" class="nav__buttons-size" />
                   </a>
                 </span>
-              </div>
-              <span class="nav__icon">
-                <img
-                  src="svg/email-icon.svg"
-                  alt="email icon"
-                  class="nav__buttons--right"
-                />
               </span>
-              <svg
-                width="5"
-                height="30"
-                xmlns="http://www.w3.org/2000/svg"
-                class="line icon-margin-l"
-              >
-                <line
-                  x1="1"
-                  y1="0"
-                  x2="1"
-                  y2="30"
-                  stroke="white"
-                  stroke-width="2"
-                ></line>
+              <span class="nav__icon" title="Email">
+                <a href="mailto:christinekynguyen@example.com">
+                  <img src="svg/email-icon.svg" alt="send email" class="nav__buttons-size"></a>
+              </span>
+              <svg width="3" height="30" xmlns="http://www.w3.org/2000/svg" class="icon-margin-l">
+                <line x1="1" y1="0" x2="1" y2="30" stroke="white" stroke-width="2"></line>
               </svg>
-              <!-- <input type="checkbox">
-            <label for="darkmode-toggle"></label> -->
+              <span class="nav__icon" title="Instagram">
+                <a href="https://www.instagram.com/ciirche/" target="_blank"><img src="svg/instagram-icon.svg" alt="Instagram link"
+                    class="nav__buttons-size"></a>
+              </span>
             </div>
           </nav>
         </header>

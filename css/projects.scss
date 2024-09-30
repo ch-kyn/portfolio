@@ -1,14 +1,38 @@
 @use 'common.scss';
 @use 'style.scss';
+@use 'animations.scss';
+
+p, h1, h2, h3 {
+  line-height: 1.5;
+  color: var(--white);
+}
+
+p {
+font-family: "Inter";
+font-weight: 500;
+color: #cfcfcf;
+}
+
+h2 {
+font-size: 1.4rem;
+padding-bottom: 2%;
+font-family: "Space Mono";
+font-weight: 700;
+}
+
+h3 {
+font-size: 1.2rem;
+padding-bottom: 0.5vw;
+}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-main > :last-child {
-  margin: 5%;
+  > :last-child {
+    margin: 5%;
+  }
 }
 
 .home-container {
@@ -17,51 +41,11 @@ main > :last-child {
     padding: 1% 0;
   }
 
-  /* body.no-scroll {
-    overflow: hidden;
-  } */
-
-  @keyframes moveDown {
-    0% {
-      transform: translateY(10%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes moveDown-o {
-    0% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    20% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0);
-
-    }
-  } 
-
-  @keyframes moveDown2 {
-    0% {
-      transform: translateY(5%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-
 .overlay {
-  // @include common.background-settings(var(--dark-blue), var(--baby-blue));
-  // @include common.background-settings(#06070d, #4f5172);
   position: absolute;    
   top: 0;
   left: 0;
   width: 100vw;          
-  // height: 100%; 
   display: none; 
   overflow: auto;
   z-index: 10;
@@ -74,13 +58,12 @@ main > :last-child {
   &__content {
     @include common.background-settings(#06070d, #4f5172);
     width: 100%;
-    // height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     position: relative;
     gap: 5%;
-    border: solid 2.5px white;
+    border: common.$border-white;
     border-radius: 10px;
     margin: 1%;
 
@@ -115,18 +98,14 @@ main > :last-child {
   border-radius: 25px;
   padding: 2%;
   font-weight: bold;
-  // background-color: transparent;
   background-color: rgba(215, 25, 136, 0.1);
 }
 
 .button--exit {
   width: 2vw;
   height: 2vw;
-  /* grid-column: 2; */
-  /* grid-row: 1; */
   position: absolute;
   top: 2%;
-  /* padding: 2%; */
   right: 2%;
   background: none;
   border: none;
@@ -149,56 +128,19 @@ main > :last-child {
     animation: moveDown-o 1s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
-    
     img {
         width: 35vw;
         height: 100%;
         object-fit: cover;
         overflow: hidden;
-        // padding: 2%;
         border-top-left-radius: 7px;
         border-bottom-left-radius: 7px;
-        border-right: white solid 2.5px;
+        border-right: common.$border-white;
     }
 }
 
 .project-text {
     padding: 5%;
-}
-
-html, body {
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-  }
-  
-  html::-webkit-scrollbar, body::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
-  }
-  
-p, h1, h2 {
-    color: black;
-    line-height: 1.5;
-}
-
-p {
-  font-family: "Inter";
-  font-family: "Inter";
-  font-weight: 500;
-  color: #cfcfcf;
-}
-
-h2 {
-  font-size: 1.4rem;
-  padding-bottom: 2%;
-  color: var(--white);
-  font-family: "Space Mono";
-  font-weight: 700;
-}
-
-h3 {
-  color: var(--white);
-  font-size: 1.2rem;
-  padding-bottom: 0.5vw;
 }
 
 .tech {
@@ -215,17 +157,27 @@ h3 {
   }
 }
 
-/* .infotest {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.info {
-width: 50ch;
-} */
-
 .info {
   padding: 5% 0;
 }
 
+@media (max-width: 1200px) {
+  .testblock {
+    width: 70vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    img {
+      width: 100%;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      border-bottom-left-radius: initial;
+      border-right: initial;
+      border-bottom: common.$border-white;
+    }
+  }
+  
+  .overlay__content {
+     @include common.flex-center-align(false, true);
+     flex-direction: column;
+  }
+}

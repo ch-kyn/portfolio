@@ -27,35 +27,35 @@
             <img src="svg/arrow--left.svg" alt="arrow left icon" class="nav__buttons--arrow" />
             <img src="svg/arrow--right.svg" alt="arrow right icon" class="nav__buttons--arrow icon-margin-r" />
             <span class="nav__icon nav__icon--home" title="Home">
-              <a href="index.html"><img src="svg/home.svg" alt="link to homepage" class="nav__buttons--left" /></a>
+              <a href="index.html"><img src="svg/home.svg" alt="link to homepage" class="nav__buttons-size" /></a>
             </span>
           </div>
-          <ul class="menu">
-            <li>home/</li>
-            <img src="svg/arrow--down.svg" alt="arrow dropdown menu icon" class="arrow-down" />
-            <div class="menu__dropdown">
-              <li class="nav--active"><a href="#">~/</a></li>
-              <li><a href="projects.html">./projects</a></li>
+          <ul class="menu" aria-label="Main Navigation">
+            <li class="menu--active">home/</li>
+            <img src="svg/arrow--down.svg" alt="arrow dropdown menu icon" class="nav__buttons-size arrow-down" />
+            <div class="menu__dropdown" aria-label="Dropdown Menu">
+              <li><a href="#">~</a></li>
+              <li><a href="projects.html">projects</a></li>
             </div>
           </ul>
           <div class="nav__buttons nav--hide">
-            <span class="icon-wrap2">
+            <span class="icon-wrap">
               <span class="nav__icon" title="GitHub">
                 <a href="https://github.com/ch-kyn" target="_blank">
-                  <img src="svg/github-icon.svg" alt="GitHub link" class="nav__buttons--right" />
+                  <img src="svg/github-icon.svg" alt="GitHub link" class="nav__buttons-size" />
                 </a>
               </span>
             </span>
             <span class="nav__icon" title="Email">
               <a href="mailto:christinekynguyen@example.com">
-                <img src="svg/email-icon.svg" alt="send email" class="nav__buttons--right" /></a>
+                <img src="svg/email-icon.svg" alt="send email" class="nav__buttons-size"></a>
             </span>
             <svg width="3" height="30" xmlns="http://www.w3.org/2000/svg" class="icon-margin-l">
               <line x1="1" y1="0" x2="1" y2="30" stroke="white" stroke-width="2"></line>
             </svg>
             <span class="nav__icon" title="Instagram">
               <a href="https://www.instagram.com/ciirche/" target="_blank"><img src="svg/instagram-icon.svg" alt="Instagram link"
-                  class="nav__buttons--right"></a>
+                  class="nav__buttons-size"></a>
             </span>
           </div>
         </nav>
@@ -63,7 +63,7 @@
       <main class="main-grid">
         <span class="plus">+</span>
 
-        <div class="flex-ya flex-right">
+        <div class="main-cont main-cont--left">
           <span class="hello_to_you">hello<span style="font-size: 5rem">.</span></span>
           <h1 class="intro__greeting">
             <span>I'm </span><span>Christine*</span>
@@ -90,14 +90,14 @@
             </span>            
           </section>
         </div>
-        <div class="flex-ya flex-left">
+        <div class="main-cont main-cont--right">
           <img src="images/profile.webp" alt="selfie of Christine" class="profile-pic" />
           <section class="about-me">
             <p>
-              currently studying web development at NTNU Gjøvik, and would
-              describe myself as very enthusiastic towards learning, finding
+              currently studying <span class="highlight">web development</span> at NTNU Gjøvik, and would
+              describe myself as <span class="highlight">very enthusiastic towards learning</span>, finding
               creative solutions, and expanding my skillset in both front- and
-              back-end development :)
+              back-end development <span class="highlight">:)</span>
             </p>
           </section>
         </div>
