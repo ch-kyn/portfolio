@@ -385,7 +385,7 @@ main {
   padding: 3%;
 }
 .about-me .highlight {
-  color: var(--baby-blue-v2);
+  font-weight: bold;
 }
 
 .main-cont {
@@ -591,17 +591,31 @@ main > :last-child {
 .overlay__text {
   grid-column: 1;
   grid-row: 1;
-  margin: 4rem;
+  margin: 4rem 0 6rem 4rem;
   justify-self: center;
 }
 
-.button {
+.actions {
+  margin: 1.5rem 0 0.5rem 0;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.actions__button {
   color: var(--pink);
   border: var(--pink) solid 2.5px;
   border-radius: 25px;
   padding: 2%;
   font-weight: bold;
-  background-color: rgba(215, 25, 136, 0.1);
+  background-color: rgba(203, 16, 141, 0.1);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.actions__button:hover {
+  color: var(--baby-blue);
+  border: var(--baby-blue) solid 2.5px;
+  background-color: rgba(134, 173, 236, 0.1);
 }
 
 .button--exit {

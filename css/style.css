@@ -385,7 +385,7 @@ main {
   padding: 3%;
 }
 .about-me .highlight {
-  color: var(--baby-blue-v2);
+  font-weight: bold;
 }
 
 .main-cont {
