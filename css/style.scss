@@ -12,6 +12,7 @@ body {
 .home-container {
   @include common.flex-center-align(true, true);
   height: 100vh;
+  padding: 1% 0;
 }
 
 a {
@@ -31,7 +32,7 @@ li {
 .container {
   @include common.background-settings(#06070d, #4f5172);
   width: 98vw;
-  height: 96%;
+  height: 100%;
   color: var(--white);
   border: common.$border-white;
   border-radius: common.$border-radius-default;
@@ -45,7 +46,7 @@ main {
   @include common.flex-center-align(false, true);
   height: 90%;
   position: relative;
-  padding: 0 7%;
+  padding: 10% 5%;
 }
 
 .profile-pic {
@@ -193,6 +194,10 @@ main {
     margin: 0 auto;
   }
 
+  .home-container {
+    height: 1200px;
+  }
+
   .nav-buttons--right {
     width: 200px;
   }
@@ -209,11 +214,6 @@ main {
 @media (max-width: 1200px) {
   :root {
     font-size: 14px;
-  }
-
-  .testblock {
-    grid-template-columns: 1fr; /* Change to single column layout */
-    grid-template-rows: auto auto; /* Stack the rows (image on top, text below) */
   }
 }
 
@@ -234,7 +234,6 @@ main {
 }
 
 @media (max-width: 640px) {
-
   nav {
     padding: 2.5% 0;
   }
@@ -308,6 +307,5 @@ main {
 @media (max-width: 350px) {
   .main-grid {
     gap: 5vw;
-    padding: 0 7%;
   }
 }

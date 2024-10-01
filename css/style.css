@@ -25,6 +25,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  position: relative;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -239,6 +243,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 1% 0;
 }
 
 a {
@@ -262,7 +267,7 @@ li {
   background-attachment: fixed, fixed;
   background-position: top left, center;
   width: 98vw;
-  height: 96%;
+  height: 100%;
   color: var(--white);
   border: 2.5px solid var(--white);
   border-radius: 10px;
@@ -277,7 +282,7 @@ main {
   justify-content: center;
   height: 90%;
   position: relative;
-  padding: 0 7%;
+  padding: 10% 5%;
 }
 
 .profile-pic {
@@ -412,6 +417,9 @@ main {
   html {
     margin: 0 auto;
   }
+  .home-container {
+    height: 1200px;
+  }
   .nav-buttons--right {
     width: 200px;
   }
@@ -425,10 +433,6 @@ main {
 @media (max-width: 1200px) {
   :root {
     font-size: 14px;
-  }
-  .testblock {
-    grid-template-columns: 1fr; /* Change to single column layout */
-    grid-template-rows: auto auto; /* Stack the rows (image on top, text below) */
   }
 }
 @media (max-width: 900px) {
@@ -501,6 +505,5 @@ main {
 @media (max-width: 350px) {
   .main-grid {
     gap: 5vw;
-    padding: 0 7%;
   }
 }/*# sourceMappingURL=style.css.map */

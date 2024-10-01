@@ -50,6 +50,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  position: relative;
+}
+
 nav {
   @include flex-center-align(false, true);
   padding: 1% 0;

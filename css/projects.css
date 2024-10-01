@@ -25,6 +25,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  position: relative;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -239,6 +243,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 1% 0;
 }
 
 a {
@@ -262,7 +267,7 @@ li {
   background-attachment: fixed, fixed;
   background-position: top left, center;
   width: 98vw;
-  height: 96%;
+  height: 100%;
   color: var(--white);
   border: 2.5px solid var(--white);
   border-radius: 10px;
@@ -277,7 +282,7 @@ main {
   justify-content: center;
   height: 90%;
   position: relative;
-  padding: 0 7%;
+  padding: 10% 5%;
 }
 
 .profile-pic {
@@ -412,6 +417,9 @@ main {
   html {
     margin: 0 auto;
   }
+  .home-container {
+    height: 1200px;
+  }
   .nav-buttons--right {
     width: 200px;
   }
@@ -425,10 +433,6 @@ main {
 @media (max-width: 1200px) {
   :root {
     font-size: 14px;
-  }
-  .testblock {
-    grid-template-columns: 1fr; /* Change to single column layout */
-    grid-template-rows: auto auto; /* Stack the rows (image on top, text below) */
   }
 }
 @media (max-width: 900px) {
@@ -501,15 +505,18 @@ main {
 @media (max-width: 350px) {
   .main-grid {
     gap: 5vw;
-    padding: 0 7%;
   }
 }
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   line-height: 1.5;
   color: var(--white);
 }
 
 p {
+  font-size: 1.1rem;
   font-family: "Inter";
   font-weight: 500;
   color: #cfcfcf;
@@ -524,7 +531,7 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-  padding-bottom: 0.5vw;
+  padding-bottom: 0.5rem;
 }
 
 main {
@@ -533,13 +540,11 @@ main {
   align-items: center;
 }
 main > :last-child {
-  margin: 5%;
+  margin-bottom: 5%;
 }
 
 .home-container {
   height: 100%;
-  align-items: initial;
-  padding: 1% 0;
 }
 
 .overlay {
@@ -565,29 +570,29 @@ main > :last-child {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   position: relative;
-  gap: 5%;
+  gap: 5rem;
   border: 2.5px solid var(--white);
   border-radius: 10px;
   margin: 1%;
 }
 .overlay__content p {
   grid-column: 1;
-  width: 50ch;
-  padding-bottom: 2vw;
+  width: clamp(25ch, 60vw, 50ch);
+  padding-bottom: 2rem;
 }
 .overlay__content .ex {
   grid-column: 2;
   grid-row: 1;
-  width: 50%;
-  margin: 5% 0;
+  width: calc(50% + 2vw);
+  margin: 4rem 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10px;
 }
 .overlay__text {
   grid-column: 1;
   grid-row: 1;
-  padding: 5% 0;
-  justify-self: end;
+  margin: 4rem;
+  justify-self: center;
 }
 
 .button {
@@ -600,8 +605,8 @@ main > :last-child {
 }
 
 .button--exit {
-  width: 2vw;
-  height: 2vw;
+  width: clamp(20px, 2vw, 60px);
+  height: clamp(20px, 2vw, 60px);
   position: absolute;
   top: 2%;
   right: 2%;
@@ -614,7 +619,7 @@ main > :last-child {
 }
 
 .testblock {
-  width: 62vw;
+  width: clamp(400px, 65vw, 1200px);
   height: 100%;
   margin: 5% 0 0;
   border-radius: 10px;
@@ -625,7 +630,7 @@ main > :last-child {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .testblock img {
-  width: 35vw;
+  width: clamp(200px, 32.5vw, 600px);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -657,7 +662,23 @@ main > :last-child {
   padding: 5% 0;
 }
 
+@media (min-width: 1920px) {
+  .overlay .ex {
+    width: 60%;
+  }
+}
 @media (max-width: 1200px) {
+  .testblock {
+    width: 80vw;
+  }
+  .testblock img {
+    width: 40vw;
+  }
+}
+@media (max-width: 800px) {
+  p {
+    font-size: 16px;
+  }
   .testblock {
     width: 70vw;
     grid-template-columns: 1fr;
@@ -673,7 +694,14 @@ main > :last-child {
   }
   .overlay__content {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    gap: 0;
+  }
+  .overlay__content .ex {
+    margin: 4rem 0;
+  }
+  .overlay__text {
+    margin: 4rem 0 0 0;
   }
 }/*# sourceMappingURL=projects.css.map */
