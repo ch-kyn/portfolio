@@ -107,6 +107,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.2);
   border: solid var(--pink) 2px;
   border-radius: 50px/50px;
+  cursor: pointer;
 }
 .menu a {
   display: block;

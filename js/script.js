@@ -31,11 +31,8 @@ exitBtn.forEach((button) => {
   });
 });
 
-
-
 document.addEventListener("click", (e) => {
-  // Check if click was outside the dropdown content and button
-  if (!dropdown.contains(e.target)) {
+  if (!dropdown.contains(e.target) && dropdown.styled.display === "block") {
     dropdown.style.display = "none";
   }
 });
