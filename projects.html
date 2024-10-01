@@ -30,7 +30,7 @@
   <body>
     <div class="overlay" id="overlay--1">
       <div class="overlay__content">
-        <div class="overlay__text">
+        <article class="overlay__text">
           <h2>Goal 13: Climate Action Website</h2>
           <h3>overview</h3>
           <p>
@@ -51,38 +51,31 @@
               <span>CSS</span>
             </span>
           </div>
-          <h3>process</h3>
+          <h3>about</h3>
           <p>
-            The target audience for the website was 14 to 16-year-olds, hence
-            aiming for a design that was educational yet still fun. The colors
-            green and yellow was incorparated to tie the visuals of the website
-            in with the graphic profile of Goal 13, and to make certain sections
-            stand out. I selected Arial, a popular sans-serif font, for its
-            readability on screens, and ensured that the color combinations met
-            WCAG standards to make the site accessible.
+            The target audience for the website was teenagers aged 14 to 16. My
+            primary goal was to emphasize the importance of climate change, its
+            consequences, and simple actions individuals can take to make a
+            positive impact. Additionally, the website includes a downloadable
+            custom bingo game, and a contact form to connect with younger people
+            and encourage them to share their opinions.
+          </p>
+          <p>
+            Colors green and yellow was incorparated to tie the visuals of the
+            website in with the graphic profile of Goal 13, and to make certain
+            sections stand out. I selected Arial, a popular sans-serif font, for
+            its readability on screens, and ensured that the color combinations
+            met WCAG standards to make the site accessible.
           </p>
           <p>
             The website was created with a mobile-first approach, building the
             layout with both grid and flexbox. By using media queries and
             responsive units, the website adapts smoothly to different screen
-            sizes. It also features a downloadable custom bingo game designed in
-            Adobe Illustrator, and a contact form to connect with younger people
-            and encourage them to share their opinions.
+            sizes. As I developed additional pages and worked with hundreds of
+            lines of CSS, I quickly realized the importance of the DRY (Don't
+            Repeat Yourself) principle to maintain efficiency in my code.
           </p>
-          <h3>reflection</h3>
-          <p>
-            This was the first complete website I developed with a focus on
-            purpose-driven design tailored to a specific audience. I had to keep
-            UN's visual identity in mind while planning the design, and plan out
-            the composition to present the content clearly and effectively for
-            the target audience. As I developed additional pages and worked with
-            hundreds of lines of CSS, I quickly realized the importance of the
-            DRY principle to maintain efficiency in my code. Another lesson
-            learned was that to attract as many viewers as possible, it was
-            essential to prioritize both responsiveness and accessibility to
-            ensure the message could reach as many people as possible.
-          </p>
-        </div>
+        </article>
         <button class="button--exit">
           <img
             src="svg/exit-cross.svg"
@@ -100,7 +93,7 @@
     </div>
     <div class="overlay" id="overlay--2">
       <div class="overlay__content">
-        <div class="overlay__text">
+        <article class="overlay__text">
           <h2>Roots of Life</h2>
           <h3>overview</h3>
           <p>
@@ -120,18 +113,26 @@
               <i class="devicon-css3-plain"></i>
               <span>CSS</span>
             </span>
+            <span class="tech__icon">       
+            <i class="devicon-sass-original"></i>
+          <span>Sass</span>
+            </span>
           </div>
-          <h3>process</h3>
+          <h3>about</h3>
           <p>
-            The first step in our project My main contribution was creating the
-            storyboards, drawing all the forest scenes, its respective elements,
-            and animations for most of them (not the final forest scene). Some
-            examples would be the walking deer, driving bulldozer that cuts down
-            trees, and the seed growing.
+            This project was a collaborative effort with two classmates. My
+            primary contribution was designing the storyboards and illustrating
+            all the forest scenes (except for the backround of the green hills),
+            including the various elements and animations. Some examples are
+            animating a walking deer, a bulldozer cutting down trees, and the
+            growth of a seed. For the final version of the project, where each
+            student individually finalized their three projects over the course,
+            I transitioning most of the JavaScript to GSAP, a JavaScript library
+            tailored for scroll-based animations, to improve the site's
+            performance.
           </p>
-          <h3>reflection</h3>
-          <p>N/A</p>
-        </div>
+       <p>
+       </article>
         <!-- <button class="button--exit">X</button>  -->
         <button class="button--exit">
           <img
@@ -140,12 +141,6 @@
             class="button--exit"
           />
         </button>
-        <img
-          src="images/project1.webp"
-          class="ex"
-          loading="lazy"
-          alt="screenshot of 1. project"
-        />
       </div>
     </div>
     <div class="home-container">
@@ -232,7 +227,7 @@
         </header>
         <main>
           <h1 class="hide">Projects</h1>
-          <div class="testblock">
+          <section class="article">
             <img src="images/project1.webp" alt="screenshot of 1. project" />
             <div class="project-text">
               <h2>Goal 13: Climate Action Website</h2>
@@ -264,9 +259,9 @@
                 >
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="testblock">
+          <section class="article">
             <img
               src="images/project2.webp"
               alt="screenshot of 2. project"
@@ -285,7 +280,7 @@
               <div class="actions">
                 <button
                   class="actions__button button--explore"
-                  data-overlay="overlay--1"
+                  data-overlay="overlay--2"
                 >
                   Explore
                 </button>
@@ -303,7 +298,7 @@
                 >
               </div>
             </div>
-          </div>
+          </section>
         </main>
       </div>
     </div>

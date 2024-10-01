@@ -634,7 +634,7 @@ main > :last-child {
   height: 100%;
 }
 
-.testblock {
+.article {
   width: clamp(400px, 65vw, 1200px);
   height: 100%;
   border-radius: 10px;
@@ -644,7 +644,7 @@ main > :last-child {
   animation: moveDown-o 1s ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.testblock img {
+.article img {
   width: clamp(200px, 32.5vw, 600px);
   height: 100%;
   -o-object-fit: cover;
@@ -683,10 +683,10 @@ main > :last-child {
   }
 }
 @media (max-width: 1200px) {
-  .testblock {
+  .article {
     width: 80vw;
   }
-  .testblock img {
+  .article img {
     width: 40vw;
   }
 }
@@ -694,12 +694,12 @@ main > :last-child {
   p {
     font-size: 16px;
   }
-  .testblock {
+  .article {
     width: 70vw;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }
-  .testblock img {
+  .article img {
     width: 100%;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;

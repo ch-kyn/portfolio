@@ -5,10 +5,18 @@ const exitBtn = document.querySelectorAll(".button--exit");
 const homeCont = document.querySelector(".home-container");
 const overlays = document.querySelectorAll(".overlay");
 
-menu.addEventListener("click", () => {
+menu.addEventListener("click", (e) => {
+  e.stopPropagation();
   if (dropdown.style.display === "none") {
     dropdown.style.display = "block";
   } else {
+    dropdown.style.display = "none";
+  }
+});
+
+document.addEventListener("click", (e) => {
+  console.log((!dropdown.contains(e.target) && dropdown.style.display === "block"))
+  if (!dropdown.contains(e.target) && dropdown.style.display === "block") {
     dropdown.style.display = "none";
   }
 });
@@ -31,8 +39,3 @@ exitBtn.forEach((button) => {
   });
 });
 
-document.addEventListener("click", (e) => {
-  if (!dropdown.contains(e.target) && dropdown.styled.display === "block") {
-    dropdown.style.display = "none";
-  }
-});
