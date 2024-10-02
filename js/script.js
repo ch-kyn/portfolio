@@ -15,9 +15,14 @@ menu.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  console.log((!dropdown.contains(e.target) && dropdown.style.display === "block"))
   if (!dropdown.contains(e.target) && dropdown.style.display === "block") {
     dropdown.style.display = "none";
+  }
+});
+
+menu.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    dropdown.style.display = "block";
   }
 });
 
