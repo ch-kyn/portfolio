@@ -62,7 +62,7 @@ main {
   &__greeting {
     line-height: 1.5;
     white-space: nowrap;
-    animation: moveDownWait 1.5s ease-in-out;
+    animation: appearUp 1.5s ease-in-out;
 
     span:nth-of-type(1) {
       font-size: clamp(2.3rem, 2vw + 1rem, 3rem);
@@ -180,6 +180,7 @@ main {
 .socials {
   display: none;
   gap: 6.5%;
+  animation: introWait 2s linear;
 
   img {
     width: 25px;

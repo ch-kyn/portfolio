@@ -52,7 +52,6 @@ main {
   display: none;
   overflow: auto;
   z-index: 10;
-  // animation: moveDown 1s ease-in-out;
 
   &--active {
     display: flex;
@@ -61,8 +60,7 @@ main {
   &__content {
     @include common.background-settings(#06070d, #4f5172);
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     justify-items: center;
     position: relative;
     gap: 5rem;
@@ -75,24 +73,27 @@ main {
       width: clamp(25ch, 60vw, 50ch);
       padding-bottom: 2rem;
     }
-
-    .ex {
-      grid-column: 2;
-      grid-row: 1;
-      width: calc(50% + 2vw);
-      margin: 4rem 0;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-      border-radius: 10px;
-      // animation: moveDown2 1s ease-in-out;
-    }
   }
 
   &__text {
-    grid-column: 1;
-    grid-row: 1;
     margin: 4rem 0 6rem 4rem;
     justify-self: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  &__images {
+    @include common.flex-center-align(true, false);
+    flex-direction: column;
+    margin: 4rem;
+    
+    img {
+      width: clamp(200px, calc(50% + 8vw), 550px);
+      margin-bottom: 2rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -110,8 +111,12 @@ main {
   padding: 2%;
   font-weight: bold;
   background-color: rgb(203, 16, 141, 0.1);
-  font-size: 1rem;
+  // font-size: 1rem;
   cursor: pointer;
+
+  a {
+    color: var(--pink);
+  }
 
   &:hover {
     color: var(--baby-blue);
@@ -124,8 +129,8 @@ main {
   width: clamp(20px, 2vw, 60px);
   height: clamp(20px, 2vw, 60px);
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
 }
@@ -142,8 +147,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: white solid 2.5px;
-  // border: rgb(0, 0, 0) solid 2.5px;
-  animation: moveDown-o 1s ease-in-out;
+  animation: moveCont 1s ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
@@ -164,26 +168,25 @@ main {
 
 .tech {
   display: flex;
-  flex-direction: row;
-  padding: 1vw 0 2vw;
+  padding: 1rem 0 2rem;
   &__icon {
     color: var(--pink);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-right: 5%;
-    font-size: 2rem;
+    span {
+      font-size: 1rem;
+    }
   }
+}
+
+[class^="devicon-"] {
+  font-size: 2rem;
 }
 
 .info {
   padding: 5% 0;
-}
-
-@media (min-width: 1920px) {
-  .overlay .ex {
-    width: 60%;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -220,7 +223,7 @@ main {
       flex-direction: column;
       gap: 0;
 
-      .ex {
+      &__images img {
         margin: 4rem 0;
       }
     }

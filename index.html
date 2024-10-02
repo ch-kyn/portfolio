@@ -2,20 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,38 +20,42 @@
       <header>
         <nav>
           <div class="nav__buttons">
-            <img src="svg/arrow--left.svg" alt="arrow left icon" class="nav__buttons--arrow" />
-            <img src="svg/arrow--right.svg" alt="arrow right icon" class="nav__buttons--arrow icon-margin-r" />
+            <img src="svg/arrow--left.svg" alt="arrow left icon" class="nav__buttons--arrow">
+            <img src="svg/arrow--right.svg" alt="arrow right icon" class="nav__buttons--arrow icon-margin-r">
             <span class="nav__icon nav__icon--home" title="Home">
-              <a href="index.html"><img src="svg/home.svg" alt="link to homepage" class="nav__buttons-size" /></a>
+              <a href="index.html"><img src="svg/home.svg" alt="link to homepage" class="nav__buttons-size"></a>
             </span>
           </div>
           <ul class="menu" aria-label="Main Navigation">
             <li class="menu--active">home/</li>
-            <img src="svg/arrow--down.svg" alt="arrow dropdown menu icon" class="nav__buttons-size arrow-down" />
-            <div class="menu__dropdown" aria-label="Dropdown Menu">
-              <li><a href="#">~</a></li>
-              <li><a href="projects.html">projects</a></li>
-            </div>
+            <li class="arrow-down__cont">
+              <img src="svg/arrow--down.svg" alt="Dropdown menu icon" class="nav__buttons-size arrow-down">
+              <ul class="menu__dropdown" aria-label="Dropdown Menu">
+                <li><a href="#">~</a></li>
+                <li><a href="projects.html">projects</a></li>
+              </ul>
+            </li>
           </ul>
           <div class="nav__buttons nav--hide">
             <span class="icon-wrap">
               <span class="nav__icon" title="GitHub">
                 <a href="https://github.com/ch-kyn" target="_blank">
-                  <img src="svg/github-icon.svg" alt="GitHub link" class="nav__buttons-size" />
+                  <img src="svg/github-icon.svg" alt="GitHub link" class="nav__buttons-size">
                 </a>
               </span>
             </span>
             <span class="nav__icon" title="Email">
               <a href="mailto:christinekynguyen@example.com">
-                <img src="svg/email-icon.svg" alt="send email" class="nav__buttons-size"></a>
+                <img src="svg/email-icon.svg" alt="Send email" class="nav__buttons-size">
+              </a>
             </span>
             <svg width="3" height="30" xmlns="http://www.w3.org/2000/svg" class="icon-margin-l">
               <line x1="1" y1="0" x2="1" y2="30" stroke="white" stroke-width="2"></line>
             </svg>
             <span class="nav__icon" title="Instagram">
-              <a href="https://www.instagram.com/ciirche/" target="_blank"><img src="svg/instagram-icon.svg" alt="Instagram link"
-                  class="nav__buttons-size"></a>
+              <a href="https://www.instagram.com/ciirche/" target="_blank">
+                <img src="svg/instagram-icon.svg" alt="Instagram link" class="nav__buttons-size">
+              </a>
             </span>
           </div>
         </nav>
@@ -69,7 +69,7 @@
             <span>I'm </span><span>Christine*</span>
           </h1>
           <div class="intro__nav">
-            <span>if interested, check out my</span>
+            <span>If interested, check out my</span>
             <h2 class="intro__nav--top"><a href="projects.html" class="projects-link">projects ►</a></h2>
           </div>
           <section class="socials">
@@ -80,21 +80,21 @@
             </span>
             <span class="nav__icon" title="Email">
               <a href="mailto:christinekynguyen@example.com">
-                <img src="svg/email-icon.svg" alt="send email">
+                <img src="svg/email-icon.svg" alt="icon to send email">
               </a>
             </span>
             <span class="nav__icon" title="Instagram">
               <a href="https://www.instagram.com/ciirche/" target="_blank">
                 <img src="svg/instagram-icon.svg" alt="Instagram link">
               </a>
-            </span>            
+            </span>
           </section>
         </div>
         <div class="main-cont main-cont--right">
-          <img src="images/profile.webp" alt="selfie of Christine" class="profile-pic" />
+          <img src="images/profile.webp" alt="selfie of website owner" class="profile-pic">
           <section class="about-me">
             <p>
-              currently studying <span class="highlight">web development</span> at NTNU Gjøvik, and would
+              Currently studying <span class="highlight">web development</span> at NTNU Gjøvik, and would
               describe myself as <span class="highlight">very enthusiastic towards learning</span>, finding
               creative solutions, and expanding my skillset in both front- and
               back-end development <span class="highlight">:)</span>
@@ -102,9 +102,8 @@
           </section>
         </div>
         <!-- <span>&#169; 2024 Christine Ky Nguyen</span> -->
+      </main>
     </div>
-    </main>
   </div>
 </body>
-
 </html>

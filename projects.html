@@ -61,7 +61,7 @@
             and encourage them to share their opinions.
           </p>
           <p>
-            Colors green and yellow was incorparated to tie the visuals of the
+            Colors green and yellow was incorporated to tie the visuals of the
             website in with the graphic profile of Goal 13, and to make certain
             sections stand out. I selected Arial, a popular sans-serif font, for
             its readability on screens, and ensured that the color combinations
@@ -83,12 +83,13 @@
             class="button--exit"
           />
         </button>
-        <img
-          src="images/project1-long.webp"
-          class="ex"
-          alt="full page of website"
-          loading="lazy"
-        />
+        <div class="overlay__images">
+          <img
+            src="images/project1-long.webp"
+            alt="full page of website"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
     <div class="overlay" id="overlay--2">
@@ -113,27 +114,25 @@
               <i class="devicon-css3-plain"></i>
               <span>CSS</span>
             </span>
-            <span class="tech__icon">       
-            <i class="devicon-sass-original"></i>
-          <span>Sass</span>
+            <span class="tech__icon">
+              <i class="devicon-sass-original"></i>
+              <span>Sass</span>
+            </span>
+            <span class="tech__icon">
+              <i class="devicon-javascript-plain"></i>
+              <span>JS</span>
             </span>
           </div>
           <h3>about</h3>
           <p>
             This project was a collaborative effort with two classmates. My
             primary contribution was designing the storyboards and illustrating
-            all the forest scenes (except for the backround of the green hills),
-            including the various elements and animations. Some examples are
-            animating a walking deer, a bulldozer cutting down trees, and the
-            growth of a seed. For the final version of the project, where each
-            student individually finalized their three projects over the course,
-            I transitioning most of the JavaScript to GSAP, a JavaScript library
-            tailored for scroll-based animations, to improve the site's
-            performance.
+            all the forest scenes in Adobe Illustrator (except for the background of the green
+            hills), including the various elements and animations. For the final version of the project, where
+            each student individually finalized their three projects over the
+            course, I transitioned most of the JavaScript to GSAP.
           </p>
-       <p>
-       </article>
-        <!-- <button class="button--exit">X</button>  -->
+        </article>
         <button class="button--exit">
           <img
             src="svg/exit-cross.svg"
@@ -141,6 +140,18 @@
             class="button--exit"
           />
         </button>
+        <div class="overlay__images">
+          <img
+            src="images/storyboard-v2.webp"
+            alt="second storyboard for storyscroll"
+            loading="lazy"
+          />
+          <img
+            src="images/project2-scene2.png"
+            alt="growing trees scene from storyscoll"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
     <div class="home-container">
@@ -169,15 +180,17 @@
             </div>
             <ul class="menu" aria-label="Main Navigation">
               <li class="menu--active">projects/</li>
-              <img
-                src="svg/arrow--down.svg"
-                alt="arrow dropdown menu icon"
-                class="nav__buttons-size arrow-down"
-              />
-              <div class="menu__dropdown" aria-label="Dropdown Menu">
-                <li><a href="index.html">~</a></li>
-                <li><a href="#">projects</a></li>
-              </div>
+              <li class="arrow-down__cont">
+                <img
+                  src="svg/arrow--down.svg"
+                  alt="arrow dropdown menu icon"
+                  class="nav__buttons-size arrow-down"
+                />
+                <ul class="menu__dropdown" aria-label="Dropdown Menu">
+                  <li><a href="index.html">~</a></li>
+                  <li><a href="#">projects</a></li>
+                </ul>
+              </li>
             </ul>
             <div class="nav__buttons nav--hide">
               <span class="icon-wrap">
@@ -197,7 +210,8 @@
                     src="svg/email-icon.svg"
                     alt="send email"
                     class="nav__buttons-size"
-                /></a>
+                  />
+                </a>
               </span>
               <svg
                 width="3"
@@ -215,12 +229,13 @@
                 ></line>
               </svg>
               <span class="nav__icon" title="Instagram">
-                <a href="https://www.instagram.com/ciirche/" target="_blank"
-                  ><img
+                <a href="https://www.instagram.com/ciirche/" target="_blank">
+                  <img
                     src="svg/instagram-icon.svg"
                     alt="Instagram link"
                     class="nav__buttons-size"
-                /></a>
+                  />
+                </a>
               </span>
             </div>
           </nav>
@@ -245,18 +260,18 @@
                 >
                   Explore
                 </button>
-                <a
+                <button
+                class="actions__button"><a
                   href="https://github.com/ch-kyn/IDG1292-oblig3"
                   target="_blank"
-                  class="actions__button"
                   >GitHub</a
-                >
-                <a
+                ></button>
+                <button
+                class="actions__button"><a
                   href="https://ch-kyn.github.io/IDG1292-oblig3/"
                   target="_blank"
-                  class="actions__button"
                   >Live Site</a
-                >
+                ></button>
               </div>
             </div>
           </section>
@@ -284,18 +299,19 @@
                 >
                   Explore
                 </button>
+                <button
+                class="actions__button">
                 <a
                   href="https://github.com/ch-kyn/idg1292-2024-oblig3-group01-portfolio"
                   target="_blank"
-                  class="actions__button"
                   >GitHub</a
-                >
-                <a
+                ></button>
+                <button
+                class="actions__button"><a
                   href="https://ch-kyn.github.io/idg1292-2024-oblig3-group01-portfolio/"
                   target="_blank"
-                  class="actions__button"
                   >Live Site</a
-                >
+                ></button>
               </div>
             </div>
           </section>
