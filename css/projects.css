@@ -596,16 +596,19 @@ main > :last-child {
   gap: 0.6rem;
 }
 .actions__button {
+  font-size: 1rem;
   color: var(--pink);
   border: var(--pink) solid 2.5px;
   border-radius: 25px;
-  padding: 2%;
+  padding: 0.5rem;
   font-weight: bold;
   background-color: rgba(203, 16, 141, 0.1);
   cursor: pointer;
+  white-space: nowrap;
 }
 .actions__button a {
   color: var(--pink);
+  font-size: 1rem;
 }
 .actions__button a:hover {
   color: var(--baby-blue);
@@ -716,8 +719,11 @@ main > :last-child {
   .overlay__text {
     margin: 4rem 0 0 0;
   }
+  .actions {
+    margin: 1rem 0;
+  }
 }
-@media (max-width: 800px) {
+@media (max-width: 400px) {
   .article {
     width: 78vw;
   }
