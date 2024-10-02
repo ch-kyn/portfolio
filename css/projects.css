@@ -514,14 +514,14 @@ p {
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding-bottom: 2%;
   font-family: "Space Mono";
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding-bottom: 0.5rem;
 }
 
@@ -600,18 +600,19 @@ main > :last-child {
   color: var(--pink);
   border: var(--pink) solid 2.5px;
   border-radius: 25px;
-  padding: 0.5rem;
+  padding: 2%;
   font-weight: bold;
   background-color: rgba(203, 16, 141, 0.1);
   cursor: pointer;
   white-space: nowrap;
-}
-.actions__button a {
-  color: var(--pink);
-  font-size: 1rem;
-}
-.actions__button a:hover {
-  color: var(--baby-blue);
+  /* a {
+     color: var(--pink);
+     font-size: 1rem;
+   }
+
+   a:hover {
+     color: var(--baby-blue);
+   } */
 }
 .actions__button:hover {
   color: var(--baby-blue);
@@ -672,10 +673,11 @@ main > :last-child {
 }
 .tech__icon span {
   font-size: 1rem;
+  font-weight: bold;
 }
 
-[class^=devicon-] {
-  font-size: 2rem;
+[class^=devicon] {
+  font-size: 2.5rem;
 }
 
 .info {
@@ -720,9 +722,6 @@ main > :last-child {
   }
   .overlay__text {
     margin: 4rem 0 0 0;
-  }
-  .actions {
-    margin: 1rem 0;
   }
 }
 @media (max-width: 400px) {
