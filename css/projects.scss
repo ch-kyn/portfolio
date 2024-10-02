@@ -69,8 +69,7 @@ main {
     margin: 1%;
 
     p {
-      grid-column: 1;
-      width: clamp(25ch, 60vw, 50ch);
+      width: clamp(30ch, 60vw, 50ch);
       padding-bottom: 2rem;
     }
   }
@@ -205,7 +204,7 @@ main {
 
 @media (max-width: 800px) {
   p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .article {
@@ -237,4 +236,10 @@ main {
       margin: 4rem 0 0 0;
     }
   }
+}
+
+@media (max-width: 800px) {
+  .article {
+    width: 78vw;
+}
 }

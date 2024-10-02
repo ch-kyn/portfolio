@@ -567,8 +567,7 @@ main > :last-child {
   margin: 1%;
 }
 .overlay__content p {
-  grid-column: 1;
-  width: clamp(25ch, 60vw, 50ch);
+  width: clamp(30ch, 60vw, 50ch);
   padding-bottom: 2rem;
 }
 .overlay__text {
@@ -690,7 +689,7 @@ main > :last-child {
 }
 @media (max-width: 800px) {
   p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .article {
     width: 70vw;
@@ -716,5 +715,10 @@ main > :last-child {
   }
   .overlay__text {
     margin: 4rem 0 0 0;
+  }
+}
+@media (max-width: 800px) {
+  .article {
+    width: 78vw;
   }
 }/*# sourceMappingURL=projects.css.map */
