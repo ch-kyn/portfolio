@@ -596,7 +596,6 @@ main > :last-child {
   display: flex;
   gap: 0.6rem;
 }
-
 .actions__button {
   color: var(--pink);
   border: var(--pink) solid 2.5px;
@@ -608,6 +607,9 @@ main > :last-child {
 }
 .actions__button a {
   color: var(--pink);
+}
+.actions__button a:hover {
+  color: var(--baby-blue);
 }
 .actions__button:hover {
   color: var(--baby-blue);

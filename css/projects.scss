@@ -86,7 +86,7 @@ main {
     @include common.flex-center-align(true, false);
     flex-direction: column;
     margin: 4rem;
-    
+
     img {
       width: clamp(200px, calc(50% + 8vw), 550px);
       margin-bottom: 2rem;
@@ -102,26 +102,30 @@ main {
   flex-wrap: wrap;
   display: flex;
   gap: 0.6rem;
-}
 
-.actions__button {
-  color: var(--pink);
-  border: var(--pink) solid 2.5px;
-  border-radius: 25px;
-  padding: 2%;
-  font-weight: bold;
-  background-color: rgb(203, 16, 141, 0.1);
-  // font-size: 1rem;
-  cursor: pointer;
-
-  a {
+  &__button {
     color: var(--pink);
-  }
+    border: var(--pink) solid 2.5px;
+    border-radius: 25px;
+    padding: 2%;
+    font-weight: bold;
+    background-color: rgb(203, 16, 141, 0.1);
+    // font-size: 1rem;
+    cursor: pointer;
 
-  &:hover {
-    color: var(--baby-blue);
-    border: var(--baby-blue) solid 2.5px;
-    background-color: rgba(134, 173, 236, 0.1);
+    a {
+      color: var(--pink);
+    }
+
+    a:hover {
+      color: var(--baby-blue);
+    }
+
+    &:hover {
+      color: var(--baby-blue);
+      border: var(--baby-blue) solid 2.5px;
+      background-color: rgba(134, 173, 236, 0.1);
+    }
   }
 }
 
