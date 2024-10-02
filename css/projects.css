@@ -656,10 +656,6 @@ main > :last-child {
   border-right: 2.5px solid var(--white);
 }
 
-.project-text {
-  padding: 5%;
-}
-
 .tech {
   display: flex;
   padding: 1rem 0 2rem;
