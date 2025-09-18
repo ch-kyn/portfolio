@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin background-settings($gradient-start, $gradient-end) {
+  background-image: url(../svg/noise.svg),
+    linear-gradient($gradient-start, $gradient-end);
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: top left, center;
+}
+
+@mixin flex-center-align($align: false, $justify: false) {
+  display: flex;
+
+  @if $align == true {
+    align-items: center;
+  }
+
+  @if $justify == true {
+    justify-content: center;
+  }
+}
+
+$shadow-default: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$border-radius-default: 10px;
+$border-white: 2.5px solid var(--white);
+
+:root {
+  --pink: #cb108d;
+  --dark-blue: #2e2f58;
+  --baby-blue: #86adec;
+  --baby-blue-v2: #b3ccf4;
+  --white: #efefef;
+  --light-grey: #adabb7;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono";
+  font-size: 16px;
+  max-width: 1920px;
+}
+
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  position: relative;
+}
+
+nav {
+  @include flex-center-align(false, true);
+  border-bottom: $border-white;
+  padding: 1% 0;
+}
+
+.nav__buttons {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+
+  &--arrow {
+    width: 2vw;
+    margin-left: 2rem;
+  }
+
+  &-size {
+    width: 2.4vw;
+    height: 2.4vw;
+  }
+}
+
+.nav__icon,
+.nav__icon--home {
+  @include flex-center-align(true, false);
+  position: relative;
+  z-index: 2;
+
+  // to make round circle hover effect
+  &::after {
+    content: "";
+    width: 160%;
+    height: 160%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transition: all ease 0.5s;
+    background-color: var(--white);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 0.2;
+  }
+
+  // get rid of sizing on icons due to font-size on <a>
+  a {
+    font-size: 0;
+  }
+}
+
+ul > .arrow-down__cont {
+  font-size: 0;
+  padding: 0;
+}
+
+.arrow-down {
+  width: 2vw;
+}
+
+.icon-wrap {
+  padding: 0 1vw 0 2vw;
+}
+
+.icon-margin-l {
+  margin: 0 1.2vw;
+}
+
+.icon-margin-r {
+  margin-right: 2vw;
+}
+
+.menu {
+  @include flex-center-align(true, false);
+  justify-content: space-between;
+  position: relative;
+  width: 60%;
+  padding: 0.1% 1.5%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: solid var(--pink) 2px;
+  border-radius: 50px / 50px;
+  cursor: pointer;
+
+  a, .slash {
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-indent: 1rem;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &:hover {
+    border: solid var(--baby-blue) 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &__dropdown {
+    @include background-settings(var(--dark-blue), var(--baby-blue));
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 102%;
+    top: -5%;
+    left: -1%;
+    padding: 1vw 0;
+    border-radius: 18px;
+
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+// to hide h1 title
+.hide {
+  visibility: hidden;
+  font-size: 0;
+}
+
+@media (min-width: 1920px) {
+  .nav__buttons {
+    justify-content: space-evenly;
+
+    &--arrow {
+      // width: 60px;
+      margin-left: 0;
+    }
+
+    // &-size {
+    //   width: 60px;
+    //   height: 60px;
+    // }
+  }
+
+  .icon-margin-l,
+  .icon-margin-r {
+    margin: 0;
+  }
+
+  .icon-wrap {
+    padding: 0;
+  }
+}

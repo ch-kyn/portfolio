@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Compara",
+    "overview": "Collaborated with three teammates to design and develop an MVP for a comparison tool using Nuxt, Vue, and MongoDB. The platform allows researchers to create and publish studies--where participants compare images, videos, audio, and text.",
+    "cover": "/images/project1.webp",
+    "github": "https://github.com/ch-kyn/IDG1292-oblig3",
+    "live": "https://ch-kyn.github.io/IDG1292-oblig3/",
+    "tech": [
+      { "name": "HTML", "icon": "devicon-html5-plain" },
+      { "name": "CSS", "icon": "devicon-css3-plain" }
+    ],
+    "about": "The target audience for the website was teenagers aged 14 to 16...",
+    "images": ["/images/project1-long.webp"]
+  },
+  {
+    "title": "Twitter Clone",
+    "overview": "Partnered with another developer to build a Twitter-style app using Python, React, and TypeScript, implementing core social features with testing. We built an API supporting CRUD functionality for users, posts, follows, and search.",
+    "cover": "/images/project2.webp",
+    "github": "https://github.com/ch-kyn/idg1292-2024-oblig3-group01-portfolio",
+    "live": "https://ch-kyn.github.io/idg1292-2024-oblig3-group01-portfolio/",
+    "tech": [
+      { "name": "HTML", "icon": "devicon-html5-plain" },
+      { "name": "CSS", "icon": "devicon-css3-plain" },
+      { "name": "Sass", "icon": "devicon-sass-original" },
+      { "name": "JS", "icon": "devicon-javascript-plain" }
+    ],
+    "about": "This project was a collaborative effort with two classmates...",
+    "images": ["/images/storyboard-v2.webp", "/images/project2-scene2.png"]
+  },
+  {
+    "title": "N/A",
+    "Overview": "We were tasked to create a website for UN's Sustainable Development Goal 13: Climate Action with focus on responsiveness for both desktop and mobile with HTML and CSS. The objective was to create a design and message that would've engage a specific age group to advocate for the planet.",
+    "cover": "/images/project1.webp",
+    "github": "https://github.com/ch-kyn/IDG1292-oblig3",
+    "live": "https://ch-kyn.github.io/IDG1292-oblig3/",
+    "tech": [
+      { "name": "HTML", "icon": "devicon-html5-plain" },
+      { "name": "CSS", "icon": "devicon-css3-plain" }
+    ],
+    "about": "The target audience for the website was teenagers aged 14 to 16...",
+    "images": ["/images/project1-long.webp"]
+  },
+  {
+    "title": "N/A",
+    "overview": "",
+    "cover": "/images/project2.webp",
+    "github": "https://github.com/ch-kyn/idg1292-2024-oblig3-group01-portfolio",
+    "live": "https://ch-kyn.github.io/idg1292-2024-oblig3-group01-portfolio/",
+    "tech": [
+      { "name": "HTML", "icon": "devicon-html5-plain" },
+      { "name": "CSS", "icon": "devicon-css3-plain" },
+      { "name": "Sass", "icon": "devicon-sass-original" },
+      { "name": "JS", "icon": "devicon-javascript-plain" }
+    ],
+    "about": "This project was a collaborative effort with two classmates...",
+    "images": ["/images/storyboard-v2.webp", "/images/project2-scene2.png"]
+  }
+]
