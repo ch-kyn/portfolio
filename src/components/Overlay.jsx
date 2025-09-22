@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../public/css/projects.scss";
+import icons from "../utils/icons.jsx";
 
 const Overlay = ({ visible, onClose, projects, initialIndex = 0 }) => {
 	const [activeIndex, setActiveIndex] = useState(initialIndex);
@@ -55,12 +56,16 @@ const Overlay = ({ visible, onClose, projects, initialIndex = 0 }) => {
 							<>
 								<h3>Technology</h3>
 								<div className="tech">
-									{activeProject.tech.map((t, idx) => (
+									{activeProject.tech.map((t, idx) => {
+									const IconComponent = icons[t.icon];
+									return (
 										<span key={idx} className="tech__icon">
-											<i className={t.icon}></i>
+											{IconComponent ? <IconComponent size={36} /> : <></>}
+											{console.log(IconComponent, t, t.icon, icons)}
 											<span>{t.name}</span>
 										</span>
-									))}
+									);
+									})}
 								</div>
 							</>
 						)}

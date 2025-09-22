@@ -14,6 +14,7 @@ const Home = () => {
 						<h1 className="intro__greeting">
 							<span>I'm </span><span>Christine*</span>
 						</h1>
+						<span style={{ paddingTop: "0.8rem" }}>(still under construction)</span>
 						<section className="socials">
 							<span className="nav__icon" title="GitHub">
 								<a href="https://github.com/ch-kyn" target="_blank" rel="noreferrer">
@@ -41,10 +42,10 @@ const Home = () => {
 						/>
 						<section className="about-me">
 							<p>
-								Currently studying <span className="highlight">web development</span> at NTNU Gjøvik,
-								and would describe myself as <span className="highlight">very enthusiastic towards learning</span>,
-								finding creative solutions, and expanding my skillset in both front- and back-end development
-								<span className="highlight"> :)</span>
+								Currently studying <span className="about-me__highlight">web development</span> at NTNU Gjøvik, 
+								and would describe myself as <span className="about-me__highlight">very enthusiastic towards learning</span>,
+								finding creative solutions, and keep making applications
+								<span className="about-me__highlight"> :)</span>
 							</p>
 						</section>
 					</div>

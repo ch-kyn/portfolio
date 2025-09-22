@@ -11,12 +11,12 @@ const Projects = () => {
 		<div className="projects-page">
 			<h1>Projects</h1>
 			<div className="articles">
-				{projects.map((project, index) => (
+				{projects.map((project, idx) => (
 					<ProjectCard
-						key={index}
+						key={idx}
 						project={project}
 						onClick={() => {
-							setClickedIndex(index);
+							setClickedIndex(idx);
 							setOverlayVisible(true);
 						}}
 					/>

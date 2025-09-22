@@ -144,19 +144,16 @@ header {
   box-shadow: common.$shadow-default;
   animation: introWait 2s linear;
 
-  p,
-  .highlight {
-    font-size: clamp(0.8rem, 10px + 1vw, 1.1rem);
-    width: calc(37ch + 2vw);
-    overflow: auto;
-  }
-
   p {
     padding: 3%;
   }
+  
+  p, &__highlight {
+    font-size: clamp(0.8rem, 10px + 1vw, 1.1rem);
+    font-family: "Roboto Mono";
+  }
 
-  .highlight {
-    // color: var(--baby-blue-v2);
+  &__highlight {
     font-weight: bold
   }
 }

@@ -1,31 +1,34 @@
 [
   {
     "title": "Compara",
-    "overview": "Collaborated with three teammates to design and develop an MVP for a comparison tool using Nuxt, Vue, and MongoDB. The platform allows researchers to create and publish studies--where participants compare images, videos, audio, and text.",
-    "cover": "/images/project1.webp",
+    "overview": "Collaborated with three teammates to design and develop an MVP of a multimedia comparison tool, which allows researchers to create and publish studies.",
+    "cover": "/images/compara/compara_landing.webp",
     "github": "https://github.com/ch-kyn/IDG1292-oblig3",
     "live": "https://ch-kyn.github.io/IDG1292-oblig3/",
     "tech": [
-      { "name": "HTML", "icon": "devicon-html5-plain" },
-      { "name": "CSS", "icon": "devicon-css3-plain" }
+      { "name": "Nuxt", "icon": "nuxt" },
+      { "name": "Vue", "icon": "vue" },
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Docker", "icon": "docker" }
     ],
     "about": "The target audience for the website was teenagers aged 14 to 16...",
-    "images": ["/images/project1-long.webp"]
+    "images": []
   },
   {
     "title": "Twitter Clone",
-    "overview": "Partnered with another developer to build a Twitter-style app using Python, React, and TypeScript, implementing core social features with testing. We built an API supporting CRUD functionality for users, posts, follows, and search.",
-    "cover": "/images/project2.webp",
+    "overview": "Partnered with another developer to develop a Twitter-like web application, implementing a RESTful API for managing users, posts, follows, and search, while incorporating caching and basic load-balancing.",
+    "cover": "/images/twitter/twitter_landing.png",
     "github": "https://github.com/ch-kyn/idg1292-2024-oblig3-group01-portfolio",
     "live": "https://ch-kyn.github.io/idg1292-2024-oblig3-group01-portfolio/",
     "tech": [
-      { "name": "HTML", "icon": "devicon-html5-plain" },
-      { "name": "CSS", "icon": "devicon-css3-plain" },
-      { "name": "Sass", "icon": "devicon-sass-original" },
-      { "name": "JS", "icon": "devicon-javascript-plain" }
+      { "name": "Python", "icon": "python" },
+      { "name": "React", "icon": "react" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "PostgreSQL", "icon": "postgresql" },
+      { "name": "Docker", "icon": "docker" }
     ],
     "about": "This project was a collaborative effort with two classmates...",
-    "images": ["/images/storyboard-v2.webp", "/images/project2-scene2.png"]
+    "images": []
   },
   {
     "title": "N/A",
@@ -38,7 +41,7 @@
       { "name": "CSS", "icon": "devicon-css3-plain" }
     ],
     "about": "The target audience for the website was teenagers aged 14 to 16...",
-    "images": ["/images/project1-long.webp"]
+    "images": []
   },
   {
     "title": "N/A",
@@ -53,6 +56,6 @@
       { "name": "JS", "icon": "devicon-javascript-plain" }
     ],
     "about": "This project was a collaborative effort with two classmates...",
-    "images": ["/images/storyboard-v2.webp", "/images/project2-scene2.png"]
+    "images": []
   }
 ]
