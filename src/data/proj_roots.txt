@@ -1,0 +1,3 @@
+This project was a collaborative effort with two classmates. My primary contribution was designing the storyboards and illustrating all the forest scenes in Adobe Illustrator
+(except for the background of the green hills), including the various elements and animations. For the final version of the project, where each student individually finalized
+their three projects over the course, I decided to transition most of the JavaScript to GSAP due to performance issues with the former.

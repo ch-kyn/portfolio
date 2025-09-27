@@ -1,25 +1,25 @@
 [
   {
     "title": "Compara",
-    "overview": "Collaborated with three teammates to design and develop an MVP of a multimedia comparison tool, which allows researchers to create and publish studies.",
-    "cover": "/images/compara/compara_landing.webp",
-    "github": "https://github.com/ch-kyn/IDG1292-oblig3",
-    "live": "https://ch-kyn.github.io/IDG1292-oblig3/",
+    "overview": "Collaborated to design and develop an MVP of a multimedia comparison tool, which allows researchers to create and publish studies.",
+    "cover": "/images/compara/compara-landing.webp",
+    "github": "https://github.com/ch-kyn/comparative_tool_prototype",
+    "live": "",
     "tech": [
       { "name": "Nuxt", "icon": "nuxt" },
       { "name": "Vue", "icon": "vue" },
       { "name": "MongoDB", "icon": "mongodb" },
       { "name": "Docker", "icon": "docker" }
     ],
-    "about": "The target audience for the website was teenagers aged 14 to 16...",
-    "images": []
+    "process": "Compara was an MVP built by a team of four with input from a professor, who fulfilled the role of product owner. The brief was to create a platform for researches to conduct comparative research between artifacts—be it images, text, audio or video—and ability to analyze and download participants' answers in a JSON and CSV format. Existing solutions like Google Forms and Nettskjema was not satisfactory, due to it being difficult to compare multiple artifacts for different question types. My main work included leading the design, setting up database schemas, creating study and participant session endpoints, processing and visualizing participant data, and handling Docker deployment. I also created UI components for the frontend.\nFollowing a discussion meeting and additional research, we developed a prototype in Figma, refined it through feedback, and then began setting up the project. We decided on a single-page application (SPA) using Vue on the frontend, and Nuxt on the backend with MongoDB to handle server-side logic, API endpoints, routing, and data storage within the same environment. For authentication, we implemented JWT for secure login and session management.\nThis was likely the most significant learning experience of my education so far. I had the opportunity to develop a project for a fictive client while working in a team, where we were responsible for organizing and scheduling the development ourselves. Additionally, I did end-to-end testing and setting up a basic CI/CD pipeline—that deployed our Docker image to the school server—for the first time. However, it did come with multiple challenges, and if I were to do it again, I would focus on designing a more scalable structure from the start.",
+    "images": ["/images/compara/compara-dashboard.webp", "/images/compara/compara-details.webp", "/images/compara/compara-expand.webp", "/images/compara/compara-demo.webp", "/images/compara/compara-linear.webp", "/images/compara/compara-range.webp", "/images/compara/compara-responses-all.webp", "/images/compara/compara-responses-graphs.webp", "/images/compara/compara-signup.webp", "/images/compara/compara-figma.webp"]
   },
   {
     "title": "Twitter Clone",
-    "overview": "Partnered with another developer to develop a Twitter-like web application, implementing a RESTful API for managing users, posts, follows, and search, while incorporating caching and basic load-balancing.",
-    "cover": "/images/twitter/twitter_landing.png",
-    "github": "https://github.com/ch-kyn/idg1292-2024-oblig3-group01-portfolio",
-    "live": "https://ch-kyn.github.io/idg1292-2024-oblig3-group01-portfolio/",
+    "overview": "A Twitter-like web application with a implemented RESTful API for managing users, posts, follows, and search, while incorporating basic caching and load balancing.",
+    "cover": "/images/twitter/twitter-landing.webp",
+    "github": "https://github.com/ch-kyn/temu_twitter",
+    "live": "",
     "tech": [
       { "name": "Python", "icon": "python" },
       { "name": "React", "icon": "react" },
@@ -27,35 +27,37 @@
       { "name": "PostgreSQL", "icon": "postgresql" },
       { "name": "Docker", "icon": "docker" }
     ],
-    "about": "This project was a collaborative effort with two classmates...",
-    "images": []
+    "process": "In this project, a classmate and I built a small-scale clone of old Twitter. The site includes login/signup, a general feed, a search for tweets, hashtags, and users, and a profile page showing tweets, replies, and account information. The application was initially deployed on Render, but we later containerized it with Docker for easier local development. Our goal was to make it with performance and scalability in mind, even though we might be the only ones that signed up.\nAt the beginning of the project, we defined all the endpoints that were necessary for our application, and did our best to keep those RESTful. The backend was built with Python and FastAPI, using Pydantic to ensure consistent input and output. PostgreSQL suited the relational structure of Twitter-style data, while TypeScript with React on the frontend helped catch errors early and keep the code maintainable.\nTo handle potential high traffic, we set up three containers with Nginx as a load balancer to distribute requests efficiently. We implemented a simplified like batcher to reduce repeated database calls, and a basic caching system that tracked the last time a tweet was updated using a list of key-value pairs. We also did some unit and load testing to make sure everything worked as expected, although testing should've been integrated earlier in the process.",
+    "images": ["/images/twitter/twitter-signup.webp", "/images/twitter/twitter-feed.webp", "/images/twitter/twitter-reply.webp", "/images/twitter/twitter-profile.webp", "/images/twitter/twitter-search-hashtags.webp", "/images/twitter/twitter-search-people.webp"]
   },
   {
-    "title": "N/A",
-    "Overview": "We were tasked to create a website for UN's Sustainable Development Goal 13: Climate Action with focus on responsiveness for both desktop and mobile with HTML and CSS. The objective was to create a design and message that would've engage a specific age group to advocate for the planet.",
-    "cover": "/images/project1.webp",
-    "github": "https://github.com/ch-kyn/IDG1292-oblig3",
-    "live": "https://ch-kyn.github.io/IDG1292-oblig3/",
+    "title": "Perceptix",
+    "overview": "Build and discover quizzes that assess whether content is AI-generated, featuring JWT-based authentication, role-based authorization, email verification, and an administrative dashboard.",
+    "cover": "/images/perceptix/perceptix-landing.webp",
+    "github": "https://github.com/ch-kyn/perceptix",
+    "live": "",
     "tech": [
-      { "name": "HTML", "icon": "devicon-html5-plain" },
-      { "name": "CSS", "icon": "devicon-css3-plain" }
+      { "name": "React", "icon": "react" },
+      { "name": "Express", "icon": "express" },
+      { "name": "MongoDB", "icon": "mongodb" },
+      { "name": "Node.js", "icon": "node" }
     ],
-    "about": "The target audience for the website was teenagers aged 14 to 16...",
-    "images": []
+    "process": "Together with two other teammates, I helped design and develop Perceptix—a platform for researchers to create quizzes testing AI awareness. Users sign up with email verification and require admin approval to become 'researchers,' while others remain 'visitors.' The authentication and authorization processses use JWTs with role info. The quiz editor lets researchers upload stimuli, select question types (AI detection or identification), and view analytics such as average time, accuracy, partial completions, and sorting. You can also browse quizzes and profiles of researchers, allowing you to view their public quizzes. Researchers can create a bio and upload a profile image, and it exists a dark mode as well.\nMy solo contributions included the admin page, tracking page visits, showing analytics for quizzes, designing the landing page, and UX/UI changes in the quiz editor. Working under a tight timeframe taught us time management, how to perform under pressure, and the importance of following a consistent coding architecture style... the latter we will be better at next time.",
+    "images": ["/images/perceptix/perceptix-cover.webp", "/images/perceptix/perceptix-questions.webp", "/images/perceptix/perceptix-analytics.webp", "/images/perceptix/perceptix-dashboard.webp", "/images/perceptix/perceptix-settings.webp", "/images/perceptix/perceptix-admin.webp", "/images/perceptix/perceptix-signup.webp"]
   },
   {
-    "title": "N/A",
-    "overview": "",
-    "cover": "/images/project2.webp",
-    "github": "https://github.com/ch-kyn/idg1292-2024-oblig3-group01-portfolio",
-    "live": "https://ch-kyn.github.io/idg1292-2024-oblig3-group01-portfolio/",
+    "title": "Roots of Life",
+    "overview": "A complete interactive story told through scrolling and animations highlighting UN Goal 15: Life on Land, focusing on deforestation.",
+    "cover": "/images/roots/roots-title.webp",
+    "github": "https://github.com/ch-kyn/roots-of-life",
+    "live": "https://ch-kyn.github.io/roots-of-life/",
     "tech": [
-      { "name": "HTML", "icon": "devicon-html5-plain" },
-      { "name": "CSS", "icon": "devicon-css3-plain" },
-      { "name": "Sass", "icon": "devicon-sass-original" },
-      { "name": "JS", "icon": "devicon-javascript-plain" }
+      { "name": "HTML", "icon": "html" },
+      { "name": "CSS", "icon": "css" },
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "GSAP", "icon": "gsap" }
     ],
-    "about": "This project was a collaborative effort with two classmates...",
-    "images": []
+    "process": "This project was a collaborative effort with two classmates. My primary contribution was designing the storyboards and illustrating all the forest scenes in Adobe Illustrator (except for the background of the green hills), including the various elements and animations. For the final version of the project, where each student individually finalized their three projects over the course, I decided to transition most of the JavaScript to GSAP due to performance issues with the former.",
+    "images": ["images/roots/roots-forest.webp", "images/roots/roots-start.webp", "images/roots/roots-deforest.webp", "images/roots/roots-city.webp", "images/roots/roots-trees.webp", "images/roots/roots-end.webp"]
   }
 ]

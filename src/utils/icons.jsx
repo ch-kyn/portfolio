@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiPython, SiDocker, SiMongodb, SiPostgresql, SiSqlite, SiPhp, SiVuedotjs, SiNuxtdotjs } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiPython, SiDocker, SiMongodb, SiPostgresql, SiSqlite, SiPhp, SiVuedotjs, SiNuxtdotjs, SiExpress, SiNodedotjs } from "react-icons/si";
 
 const icons = {
 	html: SiHtml5,
@@ -13,8 +13,9 @@ const icons = {
 	sqlite: SiSqlite,
 	php: SiPhp,
 	vue: SiVuedotjs,
-	nuxt: SiNuxtdotjs
-  
+	nuxt: SiNuxtdotjs,
+	express: SiExpress,
+	node: SiNodedotjs,
 };
 
 export default icons;

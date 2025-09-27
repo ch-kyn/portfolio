@@ -1,0 +1,11 @@
+In this project, a classmate and I built a small-scale clone of old Twitter. The site includes login/signup, a general feed, a search for tweets, hashtags, and users,
+and a profile page showing tweets, replies, and account information. The application was initially deployed on Render, but we later containerized it with Docker for easier local development.
+Our goal was to make it with performance and scalability in mind, even though we might be the only ones that signed up.
+
+At the beginning of the project, we defined all the endpoints that was necessary for our application, and did our best to keep those RESTful. The backend was built with Python and FastAPI, using
+Pydantic to ensure consistent input and output. PostgreSQL suited the relational structure of Twitter-style data, while TypeScript with React on the frontend helped catch errors
+early and keep the code maintainable.
+
+To handle potential high traffic, we set up three containers with Nginx as a load balancer to distribute requests efficiently. We implemented a simplified like batcher to reduce repeated database
+calls, and a basic caching system that tracked the last time a tweet was updated using a list of key-value pairs. We also did some unit and load testing to make sure everything
+worked as expected, although testing should've been integrated earlier in the process.

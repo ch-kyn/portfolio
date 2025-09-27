@@ -1,0 +1,13 @@
+Compara was an MVP built by a team of four with input from a professor, who fulfilled the role of product owner. The brief was to create a platform for researches to conduct comparative research between artifacts—
+be it images, text, audio or video—and ability to analyze and download participants' answers in a JSON and CSV format. Existing solutions like Google Forms and Nettskjema was not satisfactory,
+due to it being difficult to compare multiple artifacts for different question types. My main work included leading the design, setting up database schemas, creating study and participnt session
+endpoints, processing and visualizing participant data, and handling Docker deployment. I also created UI components for the frontend.
+
+Following a discussion meeting and additional research, we developed a prototype in Figma, refined it through feedback, and then began setting up the project. We
+decided on a single-page application (SPA) using Vue on the frontend, and Nuxt on the backend with MongoDB to handle server-side logic, API endpoints, routing, and data storage within
+the same environment. For authentication, we implemented JWT for secure login and session management.
+
+This was likely the most significant learning experience of my education so far. I had the opportunity to develop a project for a fictive client while working in a team,
+where we were responsible for organizing and scheduling the development ourselves. Additionally, I did end-to-end testing and setting up a basic CI/CD pipeline—that deployed our
+Docker image to the school server—for the first time. However, it did come with multiple challenges, and if I were to do it again, I would focus on designing a more scalable structure
+from the start. 

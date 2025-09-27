@@ -1,0 +1,7 @@
+Together with two other teammates, I helped design and develop Perceptix—a platform for researchers to create quizzes testing AI awareness. Users sign up with email verification and require
+admin approval to become 'researchers,' while others remain 'visitors.' The authentication and authorization processses use JWTs with role info. The quiz editor lets researchers upload stimuli,
+select question types (AI detection or identification), and view analytics such as average time, accuracy, partial completions, and sorting. You can also browse quizzes and profiles of
+researchers, allowing you to view their public quizzes. Researchers can create a bio and upload a profile image, and it exists a dark mode as well.
+
+My solo contributions included the admin page, tracking page visits, showing analytics for quizzes, designing the landing page, and UX/UI changes in the quiz editor. Working under a tight timeframe taught us time management,
+how to perform under pressure, and the importance of following a consistent coding architecture style... the latter we will be better at next time.

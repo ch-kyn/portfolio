@@ -52,22 +52,23 @@ const Header = () => {
 			<HeaderLinks />
 			<li className="arrow-down__cont" ref={dropdownRef}>
 				<img
-				src="/svg/arrow--down.svg"
-				alt="Dropdown menu icon"
-				className="nav__buttons-size arrow-down"
-				onClick={toggleDropdown}
+					src="/svg/arrow--down.svg"
+					alt="Dropdown menu icon"
+					className="nav__buttons-size arrow-down"
+					onClick={toggleDropdown}
 				/>
 				<ul
-				className="menu__dropdown"
-				style={{ display: dropdownOpen ? "block" : "none" }}
-				aria-label="Dropdown Menu"
+					className="menu__dropdown"
+					style={{ display: dropdownOpen ? "block" : "none" }}
+					aria-label="Dropdown Menu"
+					onClick={() => setDropdownOpen(false)}
 				>
-				<li>
-					<a href="#">~</a>
-				</li>
-				<li>
-					<a href="#projects">projects</a>
-				</li>
+					<li>
+						<a href="#">~</a>
+					</li>
+					<li>
+						<a href="#projects">projects</a>
+					</li>
 				</ul>
 			</li>
 			</ul>
