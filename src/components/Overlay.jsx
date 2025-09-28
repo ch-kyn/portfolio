@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "../../public/css/projects.scss";
-import icons from "../utils/icons.jsx";
 import { FaSmile } from "react-icons/fa";
 import Carousel from "./Carousel.jsx";
+import icons from "../utils/icons.jsx";
+import "../css/projects.scss";
 
 const Overlay = ({ visible, onClose, projects, initialIndex = 0 }) => {
 	const [activeIndex, setActiveIndex] = useState(initialIndex);
@@ -53,7 +53,18 @@ const Overlay = ({ visible, onClose, projects, initialIndex = 0 }) => {
 						<h2 className="overlay__title">{activeProject.title}</h2>
 						<p>{activeProject.overview}</p>
 						{activeProject.images?.length > 0 && (
-							<Carousel images={activeProject.images} />
+							activeProject.info?.length > 0 ? (
+								<Carousel
+									key={activeIndex}
+									images={activeProject.images}
+									info={activeProject.info}
+								/>
+							) : (
+								<Carousel
+									key={activeIndex}
+									images={activeProject.images}
+								/>
+							)
 						)}
 						{activeProject.tech && (
 							<>
@@ -64,7 +75,6 @@ const Overlay = ({ visible, onClose, projects, initialIndex = 0 }) => {
 									return (
 										<span key={idx} className="tech__icon">
 											{IconComponent ? <IconComponent size={32} /> : <FaSmile size={32}/>}
-											{console.log(IconComponent, t, t.icon, icons)}
 											<span>{t.name}</span>
 										</span>
 									);

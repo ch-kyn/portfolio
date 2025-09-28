@@ -26,8 +26,8 @@ const Projects = () => {
 			<Overlay
 				visible={overlayVisible}
 				onClose={() => setOverlayVisible(false)}
-				projects={projects}        // pass all projects for tab menu
-				initialIndex={clickedIndex} // show the clicked project first
+				projects={projects}
+				initialIndex={clickedIndex}
 			/>
 		</div>
 	);

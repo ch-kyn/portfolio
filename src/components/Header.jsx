@@ -28,12 +28,12 @@ const Header = () => {
 		<nav>
 			<div className="nav__buttons">
 			<img
-				src="/svg/arrow--left.svg"
+				src="/svg/arrow-left.svg"
 				alt="arrow left icon"
 				className="nav__buttons--arrow"
 			/>
 			<img
-				src="/svg/arrow--right.svg"
+				src="/svg/arrow-right.svg"
 				alt="arrow right icon"
 				className="nav__buttons--arrow icon-margin-r"
 			/>
@@ -52,7 +52,7 @@ const Header = () => {
 			<HeaderLinks />
 			<li className="arrow-down__cont" ref={dropdownRef}>
 				<img
-					src="/svg/arrow--down.svg"
+					src="/svg/arrow-down.svg"
 					alt="Dropdown menu icon"
 					className="nav__buttons-size arrow-down"
 					onClick={toggleDropdown}

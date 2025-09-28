@@ -1,0 +1,53 @@
+@keyframes moveDown {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes appearUp {
+	0% {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes introWait {
+
+	0%,
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes moveCont {
+	0% {
+		transform: translateY(20%);
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
