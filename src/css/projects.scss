@@ -42,7 +42,7 @@ h3 {
 	background: rgba(0, 0, 0, 0.9);
 	top: 0;
 	left: 50%;
-  	transform: translateX(-50%);
+	transform: translateX(-50%);
 
 	&--active {
 		display: flex;
@@ -103,7 +103,7 @@ h3 {
 	&__title {
 		font-size: 1.8rem;
 		font-family: Space Mono;
-		font-weight: 700;	
+		font-weight: 700;
 	}
 
 	&__text {
@@ -229,10 +229,10 @@ h3 {
 	cursor: pointer;
 	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-	
+
 	&__card {
 		justify-content: space-between;
-		
+
 		&--btm {
 			display: flex;
 			flex-direction: column;
@@ -256,7 +256,7 @@ h3 {
 	&:hover {
 		transform: translateY(-5px) scale(1.01);
 		box-shadow: rgba(50, 50, 93, 0.35) 0px 4px 8px -1px,
-					rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
+			rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
 		border-color: rgb(100, 100, 100);
 	}
 
@@ -287,13 +287,13 @@ h3 {
 		// border-radius: 25px;
 		// padding: 0.4rem;
 		font-weight: bold;
-		background-color: rgb(203, 16, 141, 0.15);	
+		background-color: rgb(203, 16, 141, 0.15);
 	}
 
 	img {
 		width: 100%;
 	}
-	
+
 	.project-text {
 		padding: 1rem;
 		display: flex;
@@ -359,14 +359,14 @@ h3 {
 @media (max-width: 500px) {
 	.profile {
 		flex-direction: column-reverse;
-	}	
+	}
 }
 
 .col {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .carousel {
@@ -394,7 +394,7 @@ h3 {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		background: rgba(0,0,0,0.4);
+		background: rgba(0, 0, 0, 0.4);
 		color: var(--white);
 		border: none;
 		border-radius: 50%;
@@ -405,7 +405,7 @@ h3 {
 		&--left {
 			left: 0.4rem;
 		}
-		
+
 		&--right {
 			right: 0.4rem;
 		}
@@ -421,19 +421,34 @@ h3 {
 		display: block;
 	}
 
-	 &__text {
+	&__text {
 		margin: 0.4rem 0 2rem 0;
 		text-align: left;
-		color: var(--dark-gray); 
+		color: var(--dark-gray);
 		width: 100%;
+		height: 3rem;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		white-space: normal;
-		
+
 		span {
 			display: inline-block;
 			font-size: 0.81rem;
 			padding: 0.25rem 0.5rem;
 		}
 	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.projects-page {
+	animation: fadeIn 0.4s ease-in-out;
 }

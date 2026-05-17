@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import Overlay from "../components/Overlay";
 import projects from "../data/projects.json";
+import "../css/projects.scss";
 
 const Projects = () => {
 	const [overlayVisible, setOverlayVisible] = useState(false);
