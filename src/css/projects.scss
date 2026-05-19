@@ -10,7 +10,7 @@ h3 {
 }
 
 p {
-	font-size: 0.82rem;
+	font-size: 0.9rem;
 	font-family: Inter;
 	font-weight: 500;
 }
@@ -132,10 +132,10 @@ h3 {
 	margin-top: 0.6rem;
 	flex-wrap: wrap;
 	display: flex;
-	gap: 0.3rem;
+	gap: 0.4rem;
 
 	&__button {
-		font-size: 0.72rem;
+		font-size: 0.75rem;
 		color: var(--pink);
 		border: var(--pink) solid 2.5px;
 		border-radius: 25px;
@@ -216,7 +216,7 @@ h3 {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 	justify-items: center;
-	padding: 2rem;
+	padding: 2rem 1rem;
 	width: clamp(280px, 80%, 1200px);
 	margin: 0 auto;
 }
@@ -271,7 +271,7 @@ h3 {
 	}
 
 	&__text {
-		font-size: 0.82rem;
+		font-size: 0.9rem;
 		white-space: normal;
 		color: darkgray;
 	}
@@ -287,7 +287,7 @@ h3 {
 		background-color: #06070d;
 		padding: 0.1rem 0.2rem;
 		border-radius: 0.2rem;
-		font-size: 0.7rem;
+		font-size: 0.75rem;
 		color: var(--pink);
 		// border: var(--pink) solid 1px;
 		// border-radius: 25px;
@@ -299,7 +299,7 @@ h3 {
 	img {
 		width: 100%;
 		object-fit: cover;
-		height: clamp(140px, 20vw, 250px);
+		height: clamp(160px, 18vw, 240px);
 	}
 
 	.project-text {
@@ -316,13 +316,14 @@ h3 {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
 	p {
 		font-size: 14px;
 	}
 
 	.articles {
 		grid-template-columns: 1fr;
+		padding: 2rem 0rem;
 	}
 
 	.article {
@@ -364,9 +365,17 @@ h3 {
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
 	.profile {
 		flex-direction: column-reverse;
+	}
+
+	.actions {
+		gap: 0.65rem;
+		
+		&__buttons {
+			font-size: 0.9rem;
+		}
 	}
 }
 
@@ -376,83 +385,6 @@ h3 {
 	flex-direction: column;
 	align-items: center;
 }
-
-// .carousel {
-// 	width: clamp(200px, 70vw, 1000px);
-
-// 	&__cont {
-// 		position: relative;
-// 		width: 100%;
-// 		overflow: hidden;
-// 		border-radius: common.$border-radius-default;
-// 		aspect-ratio: 1400 / 900;
-// 		background-color: black;
-// 	}
-
-// 	&__imgs {
-// 		display: flex;
-// 		margin-bottom: 2rem;
-// 	}
-
-// 	&__img {
-// 		width: 100%;
-// 		flex-shrink: 0;
-// 		object-fit: contain;
-
-// 		&-wrap {
-// 			display: flex;
-//   			justify-content: center;
-// 		}
-// 	}
-
-// 	&__btn {
-// 		position: absolute;
-// 		top: 50%;
-// 		transform: translateY(-50%);
-// 		background: rgba(0, 0, 0, 0.4);
-// 		color: var(--white);
-// 		border: none;
-// 		border-radius: 50%;
-// 		cursor: pointer;
-// 		width: calc(20px + 2vw);
-// 		height: calc(20px + 2vw);
-
-// 		&--left {
-// 			left: 0.4rem;
-// 		}
-
-// 		&--right {
-// 			right: 0.4rem;
-// 		}
-// 	}
-
-// 	&__arrow {
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		width: 50%;
-// 		height: 50%;
-// 		display: block;
-// 	}
-
-// 	&__text {
-// 		margin: 0.4rem 0 2rem 0;
-// 		text-align: left;
-// 		color: var(--dark-gray);
-// 		width: 100%;
-// 		height: 3rem;
-// 		word-wrap: break-word;
-// 		overflow-wrap: break-word;
-// 		white-space: normal;
-
-// 		span {
-// 			display: inline-block;
-// 			font-size: 0.81rem;
-// 			padding: 0.25rem 0.5rem;
-// 		}
-// 	}
-// }
 
 .carousel {
 	width: clamp(200px, 70vw, 1000px);
@@ -537,7 +469,7 @@ h3 {
 	}
 
 	&__text {
-		margin: 0.4rem 0 2rem 0;
+		margin: 0.8rem 0 2rem 0;
 		text-align: left;
 		color: var(--dark-gray);
 		width: 100%;

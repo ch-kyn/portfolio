@@ -11,7 +11,8 @@ const ProjectCard = ({ project, onClick }) => {
 	return (
 		<>
 			<section className="article article__card" onClick={onClick}>
-				<img src={project.cover} alt={project.title} />
+				{/* Remove alt text because title is right under -> making the img decorative */}
+				<img src={project.cover} alt={''} />
 				<div className="project-text">
 					<h2>{project.title}</h2>
 					<p className="article__text">{project.overview}</p>
