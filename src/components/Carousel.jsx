@@ -50,9 +50,22 @@ const handleTransitionEnd = () => {
 			}}
 			onTransitionEnd={handleTransitionEnd}
 		>
-			{slides.map((img, i) => (
-				<img key={i} src={img} alt={`Slide ${i}`} className="carousel__img" />
-			))}
+		{slides.map((src, i) => (
+			<div key={i} className="carousel__img-wrap">
+				{src?.endsWith(".mp4") ? (
+					<video
+						src={src}
+						className="carousel__img"
+						controls
+						muted
+						playsInline
+						title="Project demo video"
+					/>
+				) : (
+				<img src={src} alt={`Slide ${i}`} className="carousel__img" />
+				)}
+			</div>
+		))}
 		</div>
 
 		<button onClick={prev} className="carousel__btn carousel__btn--left">

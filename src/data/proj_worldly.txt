@@ -1,0 +1,6 @@
+Together with two interaction designers and two other developers, we created a WoT project called Worldy.
+The user could spin a physical globe with an internal gyroscope. By letting it rest still for a few seconds, they would
+be shown a random invention, quiz, or information about the country. The Worldy app was built with React, Express.js,
+and Node-RED, used the Google Maps API to translate coordinates, the OpenAI API to generate quizzes, and a custom local API
+for inventions and facts about 100 different countries. We also implemented a web controller that made it easy to
+navigate between the different modes.

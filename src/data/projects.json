@@ -50,6 +50,50 @@
 		]
 	},
 	{
+		"title": "Worldly",
+		"overview": "A WoT project using a gyroscope-equipped physical globe to discover inventions, facts, and AI-generated quizzes about countries around the world.",
+		"cover": "/images/worldly/worldly-globe.webp",
+		"github": "https://github.com/Eirikfin/WoTGlobeProject",
+		"live": "",
+		"tech": [
+			{
+				"name": "React",
+				"icon": "react"
+			},
+			{
+				"name": "JavaScript",
+				"icon": "javascript"
+			},
+			{
+				"name": "Express",
+				"icon": "express"
+			},
+			{
+				"name": "Python",
+				"icon": "python"
+			},
+			{
+				"name": "Node-RED",
+				"icon": "node-red"
+			}
+		],
+		"process": "As the main web developer, I built the frontend, backend, and a custom country data API, connecting everything to Node-RED via Socket.io to visualize different user flows. The biggest challenge was coordinating the client, server, and Node-RED interface, managing loading states and receiving stable gyroscope coordinates from a teammate's sensor scripts.\nWorldly started as a learning tool aimed at children, but expanded to target all ages. We moved away from showing random artworks, instead focusing on inventions, quizzes, and country facts, where the link to geography and learning outcomes is much clearer. The app uses the Google Maps API to translate gyroscope coordinates into countries, OpenAI to generate country-specific quizzes, and our own JSON-based API covering inventions and facts for 100 countries. Creating an interface for adding information and images for our API would be further work.",
+		"images": [
+			"/images/worldly/worldly-overview.webp",
+			"/images/worldly/worldly-globe.webp",
+			"/images/worldly/worldly-inside_v1.webp",
+			"/images/worldly/worldly-inside_v2.webp",
+			"/images/worldly/worldly-showcase.mp4"			
+		],
+		"info": [
+			"Selecting the facts mode on the Worldly web app.",
+			"The globe prototype mounted inside a laser-cut wooden box on four diagonal ball bearings, allowing full 360° rotation.",
+			"3D-printed enclosure in an interlocking ring design, housing a Raspberry Pi 4, soldered gyroscope, and powerbank.",
+			"Internal view showing the gyroscope centered, with the Raspberry Pi and powerbank balanced on each side.",
+			"Demo: targeting France and displaying the facts mode."
+		]
+	},
+	{
 		"title": "Twitter Clone",
 		"overview": "A Twitter-like web application with a implemented RESTful API for managing users, posts, follows, and search, while incorporating basic caching and load balancing.",
 		"cover": "/images/twitter/twitter-landing.webp",
@@ -83,60 +127,14 @@
 			"/images/twitter/twitter-feed.webp",
 			"/images/twitter/twitter-reply.webp",
 			"/images/twitter/twitter-profile.webp",
-			"/images/twitter/twitter-search-hashtags.webp",
-			"/images/twitter/twitter-search-people.webp"
+			"/images/twitter/twitter-search-hashtags.webp"
 		],
 		"info": [
 			"Create an account.",
 			"A home feed that showcases all tweets, where you can like and reply to others' tweets, and tweet yourself.",
 			"Reply to a tweet, with ability to edit or delete in case you typed something wrong.",
 			"Look at others' profiles, which shows general info about the user, tweets, replies, and following/followers.",
-			"Search tweets by hashtags.",
-			"Search accounts for a term matching or appearing anywhere in the username or name."
-		]
-	},
-	{
-		"title": "Perceptix",
-		"overview": "Build and discover quizzes that assess whether content is AI-generated, featuring JWT-based authentication, role-based authorization, email verification, and an administrative dashboard.",
-		"cover": "/images/perceptix/perceptix-landing.webp",
-		"github": "https://github.com/ch-kyn/perceptix",
-		"live": "",
-		"tech": [
-			{
-				"name": "React",
-				"icon": "react"
-			},
-			{
-				"name": "Express",
-				"icon": "express"
-			},
-			{
-				"name": "MongoDB",
-				"icon": "mongodb"
-			},
-			{
-				"name": "Node.js",
-				"icon": "node"
-			}
-		],
-		"process": "Together with two other teammates, I helped design and develop Perceptix—a platform for researchers to create quizzes testing AI awareness. Users sign up with email verification and require admin approval to become 'researchers,' while others remain 'visitors.' The authentication and authorization processses use JWTs with role info. The quiz editor lets researchers upload stimuli, select question types (AI detection or identification), and view analytics such as average time, accuracy, partial completions, and sorting. You can also browse quizzes and profiles of researchers, allowing you to view their public quizzes. Researchers can create a bio and upload a profile image, and it exists a dark mode as well.\nMy solo contributions included the admin page, tracking page visits, showing analytics for quizzes, designing the landing page, and UX/UI changes in the quiz editor. Working under a tight timeframe taught us time management, how to perform under pressure, and the importance of following a consistent coding architecture style... the latter we will be better at next time.",
-		"images": [
-			"/images/perceptix/perceptix-cover.webp",
-			"/images/perceptix/perceptix-questions.webp",
-			"/images/perceptix/perceptix-analytics.webp",
-			"/images/perceptix/perceptix-dashboard.webp",
-			"/images/perceptix/perceptix-settings.webp",
-			"/images/perceptix/perceptix-admin.webp",
-			"/images/perceptix/perceptix-signup.webp"
-		],
-		"info": [
-			"Create a quiz cover with an image and description. Configure when participants will receive feedback for each question.",
-			"Add questions, choose a question type (AI detection or identification), and upload stimuli, which can be images, videos, or audio files, among other things.",
-			"View how many responses a quiz received, what participants answered, and the average completion time. You can also sort results based on participants' demographic data.",
-			"Dashboard displaying the status of a study, all uploaded files, and settings, with the ability to sort by status.",
-			"Settings that allows the user to upload a profile picture, and add a biography.",
-			"Administrative dashboard displaying user activity, with the ability to approve, ban, or delete users, and a search function to find specific accounts.",
-			"Sign up by providing your information, verify your email, and wait for admin approval to access your account."
+			"Search tweets by hashtags."
 		]
 	},
 	{
